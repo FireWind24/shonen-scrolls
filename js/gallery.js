@@ -122,5 +122,6 @@
     }
   }
 
+  window.SIZE_ICONS = SIZE_ICONS;
   window.Gallery = { applyTheme, posterCardHtml, animeCardHtml, renderPosterGrid };
 })();

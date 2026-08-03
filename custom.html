@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Design — Shonen Scrolls</title>
+  <meta name="description" content="Get a custom anime poster printed. Share your idea, pick a size, order on WhatsApp." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="noise">
+  <div class="halftone"></div>
+  <div class="page-glow"></div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Shonen Scrolls" />
+        <span>SHONEN<br /><span class="brand-sub">SCROLLS</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#animes">Series</a>
+        <a href="index.html#sizes">Sizes</a>
+        <a href="custom.html" class="active">Custom</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-wrap" id="searchWrap">
+          <svg class="search-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Search" autocomplete="off" />
+          <div class="search-drop" id="searchDrop" hidden></div>
+        </div>
+        <a class="search-mobile" href="search.html" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </a>
+        <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.7 9.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.6L5 4H2"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17.5" cy="20.5" r="1.5"/></svg>
+          <span class="cart-lbl">Cart</span>
+          <span class="cart-count" id="cartCount"></span>
+        </button>
+        <button class="burger" id="burger" aria-label="Menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#animes">Series</a>
+    <a href="index.html#sizes">Sizes</a>
+    <a href="custom.html">Custom design</a>
+  </nav>
+
+  <main>
+    <!-- ================= CUSTOM HERO ================= -->
+    <section class="custom-hero">
+      <div class="wrap">
+        <span class="kicker reveal">Bespoke prints</span>
+        <h1 class="reveal">Make it <em>yours</em></h1>
+        <p class="lead reveal">Have an idea that isn't on the wall yet? Send us a description or a reference image and we'll print a custom poster just for you.</p>
+        <div class="custom-meta reveal">
+          <div><b>₹100</b><span>From</span></div>
+          <div><b>3</b><span>Sizes</span></div>
+          <div><b>2–4 days</b><span>To your door</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">How it works</span>
+          <h2 class="sec-title">From idea to wall</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal" data-delay="0"><b>01</b><h3>Describe your idea</h3><p>Tell us what you want — a mashup, a character, a quote, an edit of your own art.</p></div>
+          <div class="step reveal" data-delay="1"><b>02</b><h3>We craft it</h3><p>Our designer sets it up as a clean print-ready poster, usually within a day.</p></div>
+          <div class="step reveal" data-delay="2"><b>03</b><h3>You approve & pay</h3><p>We send a preview on WhatsApp for your OK, then print and ship your size.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CUSTOM FORM ================= -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="kicker">Your brief</span>
+          <h2 class="sec-title">Design request</h2>
+        </div>
+
+        <div class="custom-panel reveal" id="customForm">
+          <div class="custom-form">
+            <div class="field">
+              <label for="cdBrief">Your idea *</label>
+              <textarea id="cdBrief" name="brief" rows="5" placeholder="e.g. A Gojo vs Sukuna face-off poster in ink style, with 'HONORED ONE' across the top. Or: your own artwork, edited & cropped to poster format."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="cdFile">Reference image <span style="font-weight:400;color:var(--muted);">(optional)</span></label>
+              <label class="cd-preview" id="cdPreview">
+                <input type="file" id="cdFile" accept="image/*" />
+                <svg class="cd-ph" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.6-4.6a2 2 0 0 0-2.9 0L4 19.5"/></svg>
+                <span class="cd-ph-txt">Click to add reference</span>
+                <img id="cdPreviewImg" alt="Reference preview" />
+                <button type="button" id="cdPreviewClear" aria-label="Remove image">✕</button>
+              </label>
+            </div>
+
+            <div class="field">
+              <label>Size</label>
+              <div class="cd-sizes" id="cdSizes">
+                <label class="size-opt">
+                  <input type="radio" name="cd-size" value="A4" />
+                  <span class="opt"><span class="opt-icon"></span><b>A4</b><span class="opt-price">₹250</span></span>
+                </label>
+                <label class="size-opt">
+                  <input type="radio" name="cd-size" value="A5" checked />
+                  <span class="opt"><span class="opt-icon"></span><b>A5</b><span class="opt-price">₹150</span></span>
+                </label>
+                <label class="size-opt">
+                  <input type="radio" name="cd-size" value="A6" />
+                  <span class="opt"><span class="opt-icon"></span><b>A6</b><span class="opt-price">₹100</span></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Quantity</label>
+              <div class="cd-qty">
+                <button type="button" id="cdQtyMin" aria-label="Decrease">−</button>
+                <span id="cdQtyVal">1</span>
+                <button type="button" id="cdQtyPlus" aria-label="Increase">+</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="custom-side">
+            <div class="custom-thumb"><img src="assets/custom.svg" alt="Custom poster placeholder" /></div>
+            <div class="custom-total">
+              <div class="os-total">Total <span id="cdTotal">₹150</span></div>
+              <p>Custom designs are printed after we confirm your design on WhatsApp. Reference images are sent right in the chat.</p>
+            </div>
+            <button class="btn btn-primary btn-block" id="cdAdd">Add to cart →</button>
+          </aside>
+        </div>
+
+        <p class="custom-note reveal">Not sure what to write? Try: <em>“Sukuna’s domain expansion, neon red, minimal”</em> or <em>“Our wedding date in manga panel style”</em>.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerMount"></div>
+  <div id="cartMount"></div>
+  <div id="modalMount"></div>
+  <div id="toastMount"></div>
+
+  <script src="assets/data/manifest.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>

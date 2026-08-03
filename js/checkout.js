@@ -11,7 +11,10 @@
   function summaryLines(items) {
     return items.map((it, i) => {
       const s = window.SIZES[it.size];
-      return `${i + 1}) ${it.title} — ${it.anime}\n   ${s.label} (${s.inches}) × ${it.qty} = ${window.fmt(s.price * it.qty)}`;
+      let line = `${i + 1}) ${it.title} — ${it.anime}\n   ${s.label} (${s.inches}) × ${it.qty} = ${window.fmt(s.price * it.qty)}`;
+      if (it.note) line += `\n   Brief: ${it.note}`;
+      if (it.animeId === 'custom') line += `\n   (please send the reference image in this chat)`;
+      return line;
     }).join('\n');
   }
 

@@ -39,6 +39,7 @@
         src: p.src,
         size,
         qty,
+        note: p.note,
       });
       save();
     },

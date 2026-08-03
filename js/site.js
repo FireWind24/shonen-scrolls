@@ -126,6 +126,7 @@
             <a href="index.html#animes">All series</a>
             <a href="index.html#featured">Featured scrolls</a>
             <a href="index.html#sizes">Sizes & prices</a>
+            <a href="custom.html">Custom design</a>
           </div>
         </div>
         <div>
@@ -159,7 +160,10 @@
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
     <div class="cart-head">
       <h3>Your cart</h3>
-      <button class="close" id="cartClose" aria-label="Close cart">✕</button>
+      <div class="cart-head-actions">
+        <button class="cart-clear" id="cartClear">Clear cart</button>
+        <button class="close" id="cartClose" aria-label="Close cart">✕</button>
+      </div>
     </div>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
@@ -240,12 +244,14 @@
   function cartItemHtml(it) {
     const s = window.SIZES[it.size];
     const key = `${it.animeId}::${it.src}::${it.size}`;
+    const note = it.note ? `<div class="ci-note">${it.note}</div>` : '';
     return `
     <div class="cart-item" data-key="${key}">
       <img src="${it.src}" alt="${it.title}" loading="lazy" />
       <div class="ci-info">
         <div class="ci-name">${it.title}</div>
         <div class="ci-anime">${it.anime}</div>
+        ${note}
         <div><span class="ci-size">${s.label} · ${s.inches}</span></div>
         <div class="ci-price">${fmt(s.price)} × ${it.qty} = ${fmt(s.price * it.qty)}</div>
         <div class="ci-qty">
@@ -263,11 +269,13 @@
     const total = $('#cartTotal');
     const count = $('#cartCount');
     const checkoutBtn = $('#checkoutBtn');
+    const clearBtn = $('#cartClear');
     if (!body) return;
     count.textContent = items.length ? window.ShonenCart.count : '';
     total.textContent = fmt(window.ShonenCart.total);
 
     if (!items.length) {
+      if (clearBtn) clearBtn.style.display = 'none';
       body.innerHTML = `
         <div class="cart-empty">
           <div class="bag">🛍️</div>
@@ -278,6 +286,7 @@
       checkoutBtn.disabled = true;
       return;
     }
+    if (clearBtn) clearBtn.style.display = '';
     checkoutBtn.disabled = false;
     body.innerHTML = items.map(cartItemHtml).join('');
 
@@ -363,6 +372,7 @@
     $('#cartToggle').addEventListener('click', openCart);
     $('#cartClose').addEventListener('click', closeCart);
     $('#overlay').addEventListener('click', () => { closeCart(); closeCheckout(); });
+    $('#cartClear').addEventListener('click', () => { window.ShonenCart.clear(); toast('Cart cleared'); });
 
     /* burger / mobile menu */
     const burger = $('#burger'), menu = $('#mobileMenu');
