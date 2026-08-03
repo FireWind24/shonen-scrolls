@@ -9,7 +9,7 @@
   /* ----- helpers ----- */
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
-  const fmt = (n) => '₹' + Number(n).toLocaleString('en-IN');
+  const fmt = (n) => 'Rs ' + Number(n).toLocaleString('en-PK');
 
   window.$$ = $$;
   window.fmt = fmt;
@@ -134,7 +134,6 @@
           <div class="footer-links">
             <a href="index.html#sizes">Size guide</a>
             <a href="index.html#craft">Print quality</a>
-            <a href="mailto:hello@shonenscrolls.in">Contact us</a>
             <a href="#" onclick="return false">Shipping info</a>
           </div>
         </div>
@@ -143,7 +142,6 @@
           <div class="footer-links">
             <a href="https://wa.me/${BUSINESS_WHATSAPP}" target="_blank" rel="noopener">Order on WhatsApp</a>
             <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="mailto:hello@shonenscrolls.in">hello@shonenscrolls.in</a>
           </div>
         </div>
       </div>
@@ -167,9 +165,9 @@
     </div>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
-      <div class="cart-total"><span class="lbl">Total</span><span class="amt" id="cartTotal">₹0</span></div>
+      <div class="cart-total"><span class="lbl">Total</span><span class="amt" id="cartTotal">Rs 0</span></div>
       <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout →</button>
-      <p class="cart-note">A4 ₹250 · A5 ₹150 · A6 ₹100 · Paid on WhatsApp</p>
+      <p class="cart-note">A4 Rs 250 · A5 Rs 150 · A6 Rs 100 · Paid on WhatsApp</p>
     </div>
   </aside>`;
 
@@ -183,7 +181,7 @@
         <div class="order-summary">
           <h4>Order summary</h4>
           <div id="coSummary"></div>
-          <div class="os-total">Total <span id="coTotal">₹0</span></div>
+          <div class="os-total">Total <span id="coTotal">Rs 0</span></div>
         </div>
         <form id="coFormEl" class="form-grid" novalidate>
           <div class="field"><label for="coName">Full name *</label><input id="coName" name="name" autocomplete="name" placeholder="e.g. Yuji Itadori" /></div>
@@ -205,7 +203,7 @@
         <div class="order-summary">
           <h4>Order #<span id="coOrderId"></span></h4>
           <div id="coFinalSummary"></div>
-          <div class="os-total">Total <span id="coFinalTotal">₹0</span></div>
+          <div class="os-total">Total <span id="coFinalTotal">Rs 0</span></div>
         </div>
         <div class="modal-actions">
           <button class="btn btn-gold btn-block" id="coAgain">Continue shopping</button>
