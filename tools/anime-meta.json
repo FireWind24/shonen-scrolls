@@ -1,0 +1,254 @@
+{
+  "animes": [
+    {
+      "id": "jujutsu-kaisen",
+      "name": "Jujutsu Kaisen",
+      "kanji": "呪術廻戦",
+      "tagline": "Curses, sorcery & endless chaos.",
+      "accent": "#ff2e4d",
+      "accent2": "#3ee6ff",
+      "accent3": "#0b0b12",
+      "characters": ["Yuji Itadori", "Satoru Gojo", "Megumi Fushiguro", "Nobara Kugisaki", "Ryomen Sukuna", "Kento Nanami", "Toji Fushiguro", "Choso"]
+    },
+    {
+      "id": "mob-psycho-100",
+      "name": "Mob Psycho 100",
+      "kanji": "モブサイコ100",
+      "tagline": "Feelings go beyond 100%.",
+      "accent": "#8f5bff",
+      "accent2": "#38e0b8",
+      "accent3": "#171029",
+      "characters": ["Shigeo Kageyama", "Arataka Reigen", "Ritsu Kageyama", "Dimple", "Tome Kurata", "Teruki Hanazawa"]
+    },
+    {
+      "id": "demon-slayer",
+      "name": "Demon Slayer",
+      "kanji": "鬼滅の刃",
+      "tagline": "Burn the night. Slay the demons.",
+      "accent": "#ff7a1a",
+      "accent2": "#2ad5ff",
+      "accent3": "#221014",
+      "characters": ["Tanjiro Kamado", "Nezuko Kamado", "Zenitsu Agatsuma", "Inosuke Hashibira", "Giyu Tomioka", "Kyojuro Rengoku", "Shinobu Kocho"]
+    },
+    {
+      "id": "attack-on-titan",
+      "name": "Attack on Titan",
+      "kanji": "進撃の巨人",
+      "tagline": "Shinzou wo sasageyo!",
+      "accent": "#d3b37c",
+      "accent2": "#6b7a99",
+      "accent3": "#0d0e12",
+      "characters": ["Eren Yeager", "Mikasa Ackerman", "Armin Arlert", "Levi Ackerman", "Erwin Smith", "Hange Zoe", "Reiner Braun"]
+    },
+    {
+      "id": "naruto",
+      "name": "Naruto",
+      "kanji": "ナルト",
+      "tagline": "Believe it — the ninja way.",
+      "accent": "#f59a23",
+      "accent2": "#4dabf7",
+      "accent3": "#1a1208",
+      "characters": ["Naruto Uzumaki", "Sasuke Uchiha", "Sakura Haruno", "Kakashi Hatake", "Itachi Uchiha", "Hinata Hyuga", "Gaara"]
+    },
+    {
+      "id": "solo-leveling",
+      "name": "Solo Leveling",
+      "kanji": "俺だけレベルアップ",
+      "tagline": "Rise from the lowest rank.",
+      "accent": "#8a4bff",
+      "accent2": "#3ee6ff",
+      "accent3": "#0e0a18",
+      "characters": ["Sung Jin-Woo", "Cha Hae-In", "Igris", "Beru", "Baek Yoon-Ho", "Goto Ryuji"]
+    },
+    {
+      "id": "one-piece",
+      "name": "One Piece",
+      "kanji": "ワンピース",
+      "tagline": "The King of the Pirates is out there.",
+      "accent": "#ffb03a",
+      "accent2": "#2ad5ff",
+      "accent3": "#140f0b",
+      "characters": ["Monkey D. Luffy", "Roronoa Zoro", "Vinsmoke Sanji", "Nami", "Nico Robin", "Trafalgar Law"]
+    },
+    {
+      "id": "my-hero-academia",
+      "name": "My Hero Academia",
+      "kanji": "僕のヒーローアカデミア",
+      "tagline": "Go beyond — Plus Ultra!",
+      "accent": "#6fd04b",
+      "accent2": "#ff3b5c",
+      "accent3": "#0d1408",
+      "characters": ["Izuku Midoriya", "Katsuki Bakugo", "Shoto Todoroki", "All Might", "Ochaco Uraraka", "Dabi"]
+    },
+    {
+      "id": "bleach",
+      "name": "Bleach",
+      "kanji": "ブリーチ",
+      "tagline": "Bankai!",
+      "accent": "#f78c26",
+      "accent2": "#2d9cdb",
+      "accent3": "#12121a",
+      "characters": ["Ichigo Kurosaki", "Rukia Kuchiki", "Renji Abarai", "Byakuya Kuchiki", "Kenpachi Zaraki", "Sosuke Aizen"]
+    },
+    {
+      "id": "death-note",
+      "name": "Death Note",
+      "kanji": "デスノート",
+      "tagline": "I'll take a potato chip... and eat it!",
+      "accent": "#b3261e",
+      "accent2": "#8a8a96",
+      "accent3": "#0a0a0d",
+      "characters": ["Light Yagami", "L Lawliet", "Misa Amane", "Ryuk", "Near", "Mello"]
+    },
+    {
+      "id": "tokyo-ghoul",
+      "name": "Tokyo Ghoul",
+      "kanji": "東京喰種",
+      "tagline": "The world is not wrong — it just is.",
+      "accent": "#e23b3b",
+      "accent2": "#9c9ca6",
+      "accent3": "#0e0a0a",
+      "characters": ["Ken Kaneki", "Touka Kirishima", "Hide Nagachika", "Uta", "Shuu Tsukiyama", "Ayato Kirishima"]
+    },
+    {
+      "id": "chainsaw-man",
+      "name": "Chainsaw Man",
+      "kanji": "チェンソーマン",
+      "tagline": "Don't open that door.",
+      "accent": "#ff7a2f",
+      "accent2": "#2ee6a8",
+      "accent3": "#1a0e08",
+      "characters": ["Denji", "Power", "Makima", "Aki Hayakawa", "Pochita", "Kobeni"]
+    },
+    {
+      "id": "dragon-ball-z",
+      "name": "Dragon Ball Z",
+      "kanji": "ドラゴンボールZ",
+      "tagline": "It's over 9000!",
+      "accent": "#ff8f1f",
+      "accent2": "#3aa0ff",
+      "accent3": "#10141a",
+      "characters": ["Goku", "Vegeta", "Gohan", "Piccolo", "Trunks", "Frieza"]
+    },
+    {
+      "id": "hunter-x-hunter",
+      "name": "Hunter x Hunter",
+      "kanji": "ハンターハンター",
+      "tagline": "But I'm a hunter, remember?",
+      "accent": "#4cc75f",
+      "accent2": "#e84b3c",
+      "accent3": "#0c1008",
+      "characters": ["Gon Freecss", "Killua Zoldyck", "Kurapika", "Leorio", "Hisoka", "Chrollo Lucilfer"]
+    },
+    {
+      "id": "fullmetal-alchemist",
+      "name": "Fullmetal Alchemist",
+      "kanji": "鋼の錬金術師",
+      "tagline": "Equivalent exchange.",
+      "accent": "#b0322e",
+      "accent2": "#d9a441",
+      "accent3": "#120a0a",
+      "characters": ["Edward Elric", "Alphonse Elric", "Roy Mustang", "Riza Hawkeye", "King Bradley", "Winry Rockbell"]
+    },
+    {
+      "id": "one-punch-man",
+      "name": "One Punch Man",
+      "kanji": "ワンパンマン",
+      "tagline": "One punch. That's all it takes.",
+      "accent": "#ffd23e",
+      "accent2": "#ff5b2e",
+      "accent3": "#141210",
+      "characters": ["Saitama", "Genos", "Mumen Rider", "Tatsumaki", "King", "Fubuki"]
+    },
+    {
+      "id": "code-geass",
+      "name": "Code Geass",
+      "kanji": "コードギアス",
+      "tagline": "All Hail Lelouch!",
+      "accent": "#7a4dff",
+      "accent2": "#e63a3a",
+      "accent3": "#0d0a14",
+      "characters": ["Lelouch Lamperouge", "Suzaku Kururugi", "C.C.", "Kallen Stadtfeld", "Rolo", "Euphemia"]
+    },
+    {
+      "id": "evangelion",
+      "name": "Neon Genesis Evangelion",
+      "kanji": "新世紀エヴァンゲリオン",
+      "tagline": "Shinji, get in the robot.",
+      "accent": "#a03bce",
+      "accent2": "#3ee67b",
+      "accent3": "#0c0a10",
+      "characters": ["Shinji Ikari", "Rei Ayanami", "Asuka Langley", "Misato Katsuragi", "Kaworu Nagisa", "Gendo Ikari"]
+    },
+    {
+      "id": "vinland-saga",
+      "name": "Vinland Saga",
+      "kanji": "ヴィンランド・サガ",
+      "tagline": "I have no enemies.",
+      "accent": "#2eb3a3",
+      "accent2": "#b07a3e",
+      "accent3": "#0a100e",
+      "characters": ["Thorfinn", "Thors", "Canute", "Askeladd", "Einar", "Hild"]
+    },
+    {
+      "id": "spy-x-family",
+      "name": "Spy x Family",
+      "kanji": "スパイファミリー",
+      "tagline": "For the mission. For the family.",
+      "accent": "#e86bb5",
+      "accent2": "#57c04a",
+      "accent3": "#140a10",
+      "characters": ["Loid Forger", "Anya Forger", "Yor Forger", "Bond", "Franky"]
+    },
+    {
+      "id": "steins-gate",
+      "name": "Steins;Gate",
+      "kanji": "シュタインズ・ゲート",
+      "tagline": "El Psy Kongroo.",
+      "accent": "#2e5bd9",
+      "accent2": "#d93a3a",
+      "accent3": "#0a0c14",
+      "characters": ["Okabe Rintaro", "Kurisu Makise", "Mayuri Shiina", "Daru", "Suzuha", "Moeka"]
+    },
+    {
+      "id": "tokyo-revengers",
+      "name": "Tokyo Revengers",
+      "kanji": "東京リベンジャーズ",
+      "tagline": "The crybaby hero.",
+      "accent": "#2fc0a0",
+      "accent2": "#e5484d",
+      "accent3": "#0a100f",
+      "characters": ["Takemichi Hanagaki", "Mikey", "Draken", "Chifuyu", "Kazutora", "Hakkai"]
+    },
+    {
+      "id": "overlord",
+      "name": "Overlord",
+      "kanji": "オーバーロード",
+      "tagline": "All hail the Supreme One.",
+      "accent": "#c9a227",
+      "accent2": "#b02020",
+      "accent3": "#0d0c0a",
+      "characters": ["Ainz Ooal Gown", "Albedo", "Demiurge", "Shalltear", "Cocytus", "Aura"]
+    },
+    {
+      "id": "re-zero",
+      "name": "Re:Zero",
+      "kanji": "Re:ゼロから始める異世界生活",
+      "tagline": "From zero. Again, and again.",
+      "accent": "#3a7bd9",
+      "accent2": "#e5484d",
+      "accent3": "#0a0c10",
+      "characters": ["Subaru Natsuki", "Emilia", "Rem", "Ram", "Puck", "Beatrice"]
+    },
+    {
+      "id": "fire-force",
+      "name": "Fire Force",
+      "kanji": "炎炎ノ消防隊",
+      "tagline": "A blaze of soul!",
+      "accent": "#ff6b2f",
+      "accent2": "#3aa0ff",
+      "accent3": "#140a06",
+      "characters": ["Shinra Kusakabe", "Maki Oze", "Arthur Boyle", "Tamaki Kotatsu", "Benimaru", "Akitaru Obi"]
+    }
+  ]
+}
