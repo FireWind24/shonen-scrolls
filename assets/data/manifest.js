@@ -1,5 +1,5 @@
 window.__MANIFEST__ = {
-  "generated": "2026-08-03T16:56:43.880Z",
+  "generated": "2026-08-04T18:43:53.961Z",
   "sizes": {
     "A4": {
       "label": "A4",
@@ -29,7 +29,7 @@ window.__MANIFEST__ = {
         "accent3": "#0b0b12"
       },
       "cover": "designs/anime/jujutsu-kaisen/00-jujutsu-kaisen.jpg",
-      "count": 20,
+      "count": 21,
       "posters": [
         {
           "src": "designs/anime/jujutsu-kaisen/00-jujutsu-kaisen.jpg",
@@ -92,6 +92,10 @@ window.__MANIFEST__ = {
           "title": "Satoru Gojo"
         },
         {
+          "src": "designs/anime/jujutsu-kaisen/sukuna II.jpg",
+          "title": "Sukuna II"
+        },
+        {
           "src": "designs/anime/jujutsu-kaisen/sukuna-red.jpg",
           "title": "Sukuna Red"
         },
@@ -131,76 +135,76 @@ window.__MANIFEST__ = {
           "title": "Mob Psycho 100"
         },
         {
-          "src": "designs/anime/mob-psycho-100/2462974790948971.jpg",
-          "title": "2462974790948971"
+          "src": "designs/anime/mob-psycho-100/mob-&-reigen.jpg",
+          "title": "Mob & Reigen"
         },
         {
-          "src": "designs/anime/mob-psycho-100/7177680643367869.jpg",
-          "title": "7177680643367869"
+          "src": "designs/anime/mob-psycho-100/mob-cute-poster.jpg",
+          "title": "Mob Cute Poster"
         },
         {
-          "src": "designs/anime/mob-psycho-100/48413764740016778.jpg",
-          "title": "48413764740016778"
+          "src": "designs/anime/mob-psycho-100/mob-poster-art-II.jpg",
+          "title": "Mob Poster Art II"
         },
         {
-          "src": "designs/anime/mob-psycho-100/77124212361435976.jpg",
-          "title": "77124212361435976"
+          "src": "designs/anime/mob-psycho-100/mob-poster-art-III.jpg",
+          "title": "Mob Poster Art III"
         },
         {
-          "src": "designs/anime/mob-psycho-100/122934264823086768.jpg",
-          "title": "122934264823086768"
+          "src": "designs/anime/mob-psycho-100/mob-poster-art.jpg",
+          "title": "Mob Poster Art"
         },
         {
-          "src": "designs/anime/mob-psycho-100/131941464076183323.jpg",
-          "title": "131941464076183323"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-!!.jpg",
+          "title": "Mob Psycho !!"
         },
         {
-          "src": "designs/anime/mob-psycho-100/163537030213777490.jpg",
-          "title": "163537030213777490"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-art-II.jpg",
+          "title": "Mob Psycho 100 Art II"
         },
         {
-          "src": "designs/anime/mob-psycho-100/183662491065014479.jpg",
-          "title": "183662491065014479"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-art.jpg",
+          "title": "Mob Psycho 100 Art"
         },
         {
-          "src": "designs/anime/mob-psycho-100/361413938859090062.jpg",
-          "title": "361413938859090062"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-cover.jpg",
+          "title": "Mob Psycho 100 Cover"
         },
         {
-          "src": "designs/anime/mob-psycho-100/525584219046831520.jpg",
-          "title": "525584219046831520"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-manga-cover.jpg",
+          "title": "Mob Psycho 100 Manga Cover"
         },
         {
-          "src": "designs/anime/mob-psycho-100/757238124891117699.jpg",
-          "title": "757238124891117699"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-minimal-art.jpg",
+          "title": "Mob Psycho 100 Minimal Art"
         },
         {
-          "src": "designs/anime/mob-psycho-100/760123243394798659.jpg",
-          "title": "760123243394798659"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-minimal.jpg",
+          "title": "Mob Psycho 100 Minimal"
         },
         {
-          "src": "designs/anime/mob-psycho-100/Home _ Twitter.jpg",
-          "title": "Home   Twitter"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-poster.jpg",
+          "title": "Mob Psycho 100 Poster"
         },
         {
-          "src": "designs/anime/mob-psycho-100/Mob And Reigen Wallpaper.jpg",
-          "title": "Mob And Reigen Wallpaper"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-100-season-02-poster.jpg",
+          "title": "Mob Psycho 100 Season 02 Poster"
         },
         {
-          "src": "designs/anime/mob-psycho-100/Mob psycho 100 (1).jpg",
-          "title": "Mob psycho 100 (1)"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-characters.jpg",
+          "title": "Mob Psycho Characters"
         },
         {
-          "src": "designs/anime/mob-psycho-100/Mob Psycho 100 (2016-2022).jpg",
-          "title": "Mob Psycho 100 (2016 2022)"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-fan-art.jpg",
+          "title": "Mob Psycho Fan Art"
         },
         {
-          "src": "designs/anime/mob-psycho-100/Mob Psycho 100 OVA and Season 2 Premiere Are Coming to Theaters - IGN.jpg",
-          "title": "Mob Psycho 100 OVA and Season 2 Premiere Are Coming to Theaters   IGN"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-manga-panel.jpg",
+          "title": "Mob Psycho Manga Panel"
         },
         {
-          "src": "designs/anime/mob-psycho-100/MOB PSYCHO 100.jpg",
-          "title": "MOB PSYCHO 100"
+          "src": "designs/anime/mob-psycho-100/mob-psycho-season-01-poster-art.jpg",
+          "title": "Mob Psycho Season 01 Poster Art"
         }
       ]
     },
@@ -214,124 +218,120 @@ window.__MANIFEST__ = {
         "accent2": "#2ad5ff",
         "accent3": "#221014"
       },
-      "cover": "designs/anime/demon-slayer/♡Kamado Nezuko_ 《Wallpaper》.jpg",
-      "count": 29,
+      "cover": "designs/anime/demon-slayer/0-kokushibou.jpg",
+      "count": 28,
       "posters": [
         {
-          "src": "designs/anime/demon-slayer/♡Kamado Nezuko_ 《Wallpaper》.jpg",
-          "title": "♡Kamado Nezuko  《Wallpaper》"
+          "src": "designs/anime/demon-slayer/0-kokushibou.jpg",
+          "title": "Kokushibou"
         },
         {
-          "src": "designs/anime/demon-slayer/00-demon-slayer.jpg",
-          "title": "Demon Slayer"
+          "src": "designs/anime/demon-slayer/akaza-art.jpg",
+          "title": "Akaza Art"
         },
         {
-          "src": "designs/anime/demon-slayer/2603712282022842.jpg",
-          "title": "2603712282022842"
+          "src": "designs/anime/demon-slayer/akaza-poster-art.jpg",
+          "title": "Akaza Poster Art"
         },
         {
-          "src": "designs/anime/demon-slayer/2603712282818116.jpg",
-          "title": "2603712282818116"
+          "src": "designs/anime/demon-slayer/akaza-poster.jpg",
+          "title": "Akaza Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/2603712282818117.jpg",
-          "title": "2603712282818117"
+          "src": "designs/anime/demon-slayer/demon-slayer-cover.jpg",
+          "title": "Demon Slayer Cover"
         },
         {
-          "src": "designs/anime/demon-slayer/2603712282818119.jpg",
-          "title": "2603712282818119"
+          "src": "designs/anime/demon-slayer/demon-slayer-poster-art.jpg",
+          "title": "Demon Slayer Poster Art"
         },
         {
-          "src": "designs/anime/demon-slayer/27373510232983502.jpg",
-          "title": "27373510232983502"
+          "src": "designs/anime/demon-slayer/douma-poster.jpg",
+          "title": "Douma Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/62980094797207713.jpg",
-          "title": "62980094797207713"
+          "src": "designs/anime/demon-slayer/genya-poster.jpg",
+          "title": "Genya Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/64176363435116463.jpg",
-          "title": "64176363435116463"
+          "src": "designs/anime/demon-slayer/gyomei-poster.jpg",
+          "title": "Gyomei Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/76350156179135644.jpg",
-          "title": "76350156179135644"
+          "src": "designs/anime/demon-slayer/gyomei-visual.jpg",
+          "title": "Gyomei Visual"
         },
         {
-          "src": "designs/anime/demon-slayer/85075880457798277.jpg",
-          "title": "85075880457798277"
+          "src": "designs/anime/demon-slayer/inosuke-art.jpg",
+          "title": "Inosuke Art"
         },
         {
-          "src": "designs/anime/demon-slayer/578431145935134266.jpg",
-          "title": "578431145935134266"
+          "src": "designs/anime/demon-slayer/inosuke-poster-art.jpg",
+          "title": "Inosuke Poster Art"
         },
         {
-          "src": "designs/anime/demon-slayer/701083867038544307.jpg",
-          "title": "701083867038544307"
+          "src": "designs/anime/demon-slayer/kokushibou-dark-poster.jpg",
+          "title": "Kokushibou Dark Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/701083867038697293.jpg",
-          "title": "701083867038697293"
+          "src": "designs/anime/demon-slayer/kokushibou-landscape.jpg",
+          "title": "Kokushibou Landscape"
         },
         {
-          "src": "designs/anime/demon-slayer/701083867038697328.jpg",
-          "title": "701083867038697328"
+          "src": "designs/anime/demon-slayer/kokushibou-poster-art.jpg",
+          "title": "Kokushibou Poster Art"
         },
         {
-          "src": "designs/anime/demon-slayer/701083867038697349.jpg",
-          "title": "701083867038697349"
+          "src": "designs/anime/demon-slayer/kyojuko-rengoku-sama.jpg",
+          "title": "Kyojuko Rengoku Sama"
         },
         {
-          "src": "designs/anime/demon-slayer/940970915926677197.jpg",
-          "title": "940970915926677197"
+          "src": "designs/anime/demon-slayer/mitsuri-poster.jpg",
+          "title": "Mitsuri Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/1125266656917258170.jpg",
-          "title": "1125266656917258170"
+          "src": "designs/anime/demon-slayer/muichiro-fan-art.jpg",
+          "title": "Muichiro Fan Art"
         },
         {
-          "src": "designs/anime/demon-slayer/Demon Slayer - Kimetsu no Yaiba.jpg",
-          "title": "Demon Slayer   Kimetsu no Yaiba"
+          "src": "designs/anime/demon-slayer/muichiro-poster.jpg",
+          "title": "Muichiro Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/DEMON SLAYER AKAZA ANIME POSTER __ Upper Moon 3.jpg",
-          "title": "DEMON SLAYER AKAZA ANIME POSTER   Upper Moon 3"
+          "src": "designs/anime/demon-slayer/nezuko-poster.jpg",
+          "title": "Nezuko Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/DEMON SLAYER AKAZA ANIME POSTER 2 __ UpperMoon 3.jpg",
-          "title": "DEMON SLAYER AKAZA ANIME POSTER 2   UpperMoon 3"
+          "src": "designs/anime/demon-slayer/rengoku-poster.jpg",
+          "title": "Rengoku Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/demons slayer 🌙 Kokushibo Dark Aesthetic Wallpaper.jpg",
-          "title": "Demons slayer 🌙 Kokushibo Dark Aesthetic Wallpaper"
+          "src": "designs/anime/demon-slayer/sanemi-poster.jpg",
+          "title": "Sanemi Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/GIYU TOMIOKA KIMETSU NO YAIBA _ DEMON SLAYER.jpg",
-          "title": "GIYU TOMIOKA KIMETSU NO YAIBA   DEMON SLAYER"
+          "src": "designs/anime/demon-slayer/tanjiro-poster-art.jpg",
+          "title": "Tanjiro Poster Art"
         },
         {
-          "src": "designs/anime/demon-slayer/Kokushibou, demon slayer, Full HD Wallpaper For iPhone 📱.jpg",
-          "title": "Kokushibou, demon slayer, Full HD Wallpaper For iPhone 📱"
+          "src": "designs/anime/demon-slayer/tanjiro-poster.jpg",
+          "title": "Tanjiro Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/Muichiro Tokito Wallpaper.jpg",
-          "title": "Muichiro Tokito Wallpaper"
+          "src": "designs/anime/demon-slayer/tengen-poster.jpg",
+          "title": "Tengen Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/Pulaski Wallpaper (@Pulaxki) on X.jpg",
-          "title": "Pulaski Wallpaper (@Pulaxki) on X"
+          "src": "designs/anime/demon-slayer/thunder-breathing-godspeed.jpg",
+          "title": "Thunder Breathing Godspeed"
         },
         {
-          "src": "designs/anime/demon-slayer/TANJIRO KIMETSU NO YAIBA _ DEMON SLAYER.jpg",
-          "title": "TANJIRO KIMETSU NO YAIBA   DEMON SLAYER"
+          "src": "designs/anime/demon-slayer/tomioka-poster.jpg",
+          "title": "Tomioka Poster"
         },
         {
-          "src": "designs/anime/demon-slayer/ufotable│我妻善逸│.jpg",
-          "title": "Ufotable│我妻善逸│"
-        },
-        {
-          "src": "designs/anime/demon-slayer/Wallpaper Kokushibo.jpg",
-          "title": "Wallpaper Kokushibo"
+          "src": "designs/anime/demon-slayer/zenitsu-japanese-art.jpg",
+          "title": "Zenitsu Japanese Art"
         }
       ]
     },
@@ -346,11 +346,15 @@ window.__MANIFEST__ = {
         "accent3": "#0d0e12"
       },
       "cover": "designs/anime/attack-on-titan/00-attack-on-titan-one-frame.jpg",
-      "count": 23,
+      "count": 24,
       "posters": [
         {
           "src": "designs/anime/attack-on-titan/00-attack-on-titan-one-frame.jpg",
           "title": "Attack On Titan One Frame"
+        },
+        {
+          "src": "designs/anime/attack-on-titan/59.jpg",
+          "title": "59"
         },
         {
           "src": "designs/anime/attack-on-titan/Attack on Titan.jpg",
@@ -590,116 +594,120 @@ window.__MANIFEST__ = {
         "accent2": "#2ad5ff",
         "accent3": "#140f0b"
       },
-      "cover": "designs/anime/one-piece/_Luffy Hidden in Grass – One Piece Ghibli Minimal Wallpaper 4K_.jpg",
-      "count": 27,
+      "cover": "designs/anime/one-piece/0-one-piece.jpg",
+      "count": 28,
       "posters": [
         {
-          "src": "designs/anime/one-piece/_Luffy Hidden in Grass – One Piece Ghibli Minimal Wallpaper 4K_.jpg",
-          "title": "Luffy Hidden in Grass – One Piece Ghibli Minimal Wallpaper 4K"
+          "src": "designs/anime/one-piece/0-one-piece.jpg",
+          "title": "One Piece"
         },
         {
-          "src": "designs/anime/one-piece/@Eecks on Twitter or @ah-bao on DeviantArt (1).jpg",
-          "title": "@Eecks on Twitter or @ah Bao on DeviantArt (1)"
+          "src": "designs/anime/one-piece/it's-my-soul!.jpg",
+          "title": "It's My Soul!"
         },
         {
-          "src": "designs/anime/one-piece/914862419997991.jpg",
-          "title": "914862419997991"
+          "src": "designs/anime/one-piece/Luffy-(Gear-V).jpg",
+          "title": "Luffy (Gear V)"
         },
         {
-          "src": "designs/anime/one-piece/1196337403881072.jpg",
-          "title": "1196337403881072"
+          "src": "designs/anime/one-piece/luffy-art-II.jpg",
+          "title": "Luffy Art II"
         },
         {
-          "src": "designs/anime/one-piece/4574037118264860.jpg",
-          "title": "4574037118264860"
+          "src": "designs/anime/one-piece/luffy-art.jpg",
+          "title": "Luffy Art"
         },
         {
-          "src": "designs/anime/one-piece/5277724558053524.jpg",
-          "title": "5277724558053524"
+          "src": "designs/anime/one-piece/luffy-bounty.jpg",
+          "title": "Luffy Bounty"
         },
         {
-          "src": "designs/anime/one-piece/5277724558988705.jpg",
-          "title": "5277724558988705"
+          "src": "designs/anime/one-piece/luffy-gear-5-II.jpg",
+          "title": "Luffy Gear 5 II"
         },
         {
-          "src": "designs/anime/one-piece/5840674511531976.jpg",
-          "title": "5840674511531976"
+          "src": "designs/anime/one-piece/luffy-gear-5-panel.jpg",
+          "title": "Luffy Gear 5 Panel"
         },
         {
-          "src": "designs/anime/one-piece/8162843068894503.jpg",
-          "title": "8162843068894503"
+          "src": "designs/anime/one-piece/luffy-gear-5-poster.jpg",
+          "title": "Luffy Gear 5 Poster"
         },
         {
-          "src": "designs/anime/one-piece/9218374231395126.jpg",
-          "title": "9218374231395126"
+          "src": "designs/anime/one-piece/luffy-gear-5.jpg",
+          "title": "Luffy Gear 5"
         },
         {
-          "src": "designs/anime/one-piece/9359111722707311.jpg",
-          "title": "9359111722707311"
+          "src": "designs/anime/one-piece/luffy-on-grass.jpg",
+          "title": "Luffy On Grass"
         },
         {
-          "src": "designs/anime/one-piece/14355292557378709.jpg",
-          "title": "14355292557378709"
+          "src": "designs/anime/one-piece/luffy-poster-art.jpg",
+          "title": "Luffy Poster Art"
         },
         {
-          "src": "designs/anime/one-piece/14496030045482526.jpg",
-          "title": "14496030045482526"
+          "src": "designs/anime/one-piece/luffy-x-japan.jpg",
+          "title": "Luffy X Japan"
         },
         {
-          "src": "designs/anime/one-piece/15973773675360585.jpg",
-          "title": "15973773675360585"
+          "src": "designs/anime/one-piece/luffy-x-zoro-z-sanji.jpg",
+          "title": "Luffy X Zoro Z Sanji"
         },
         {
-          "src": "designs/anime/one-piece/46302702417252138.jpg",
-          "title": "46302702417252138"
+          "src": "designs/anime/one-piece/luffy.jpg",
+          "title": "Luffy"
         },
         {
-          "src": "designs/anime/one-piece/anime one piece (1).jpg",
-          "title": "Anime one piece (1)"
+          "src": "designs/anime/one-piece/one-piece-art.jpg",
+          "title": "One Piece Art"
         },
         {
-          "src": "designs/anime/one-piece/anime one piece.jpg",
-          "title": "Anime one piece"
+          "src": "designs/anime/one-piece/one-piece-crew.jpg",
+          "title": "One Piece Crew"
         },
         {
-          "src": "designs/anime/one-piece/anime_ one piece.jpg",
-          "title": "Anime  one piece"
+          "src": "designs/anime/one-piece/one-piece-east-blue.jpg",
+          "title": "One Piece East Blue"
         },
         {
-          "src": "designs/anime/one-piece/If I get cut up, my fave also gets cut up, I dont….jpg",
-          "title": "If I get cut up, my fave also gets cut up, I dont…"
+          "src": "designs/anime/one-piece/one-piece-manga-cover.jpg",
+          "title": "One Piece Manga Cover"
         },
         {
-          "src": "designs/anime/one-piece/Luffy _ One Piece Wallpaper.jpg",
-          "title": "Luffy   One Piece Wallpaper"
+          "src": "designs/anime/one-piece/one-piece-poster-art.jpg",
+          "title": "One Piece Poster Art"
         },
         {
-          "src": "designs/anime/one-piece/Luffy Gear 5 Wallpaper.jpg",
-          "title": "Luffy Gear 5 Wallpaper"
+          "src": "designs/anime/one-piece/one-piece-sea.jpg",
+          "title": "One Piece Sea"
         },
         {
-          "src": "designs/anime/one-piece/luffy gear 5.jpg",
-          "title": "Luffy gear 5"
+          "src": "designs/anime/one-piece/one-piece.jpg",
+          "title": "One Piece"
         },
         {
-          "src": "designs/anime/one-piece/luffy poster 💭.jpg",
-          "title": "Luffy poster 💭"
+          "src": "designs/anime/one-piece/roronoa-zoro-bounty.jpg",
+          "title": "Roronoa Zoro Bounty"
         },
         {
-          "src": "designs/anime/one-piece/ONE PIECE 62／尾田 栄一郎 _ 集英社の本 公式 (1).jpg",
-          "title": "ONE PIECE 62／尾田 栄一郎   集英社の本 公式 (1)"
+          "src": "designs/anime/one-piece/shanks-bounty.jpg",
+          "title": "Shanks Bounty"
         },
         {
-          "src": "designs/anime/one-piece/One piece-east blue.jpg",
-          "title": "One piece East blue"
+          "src": "designs/anime/one-piece/to-see-is-to-believe.jpg",
+          "title": "To See Is To Believe"
         },
         {
-          "src": "designs/anime/one-piece/Shanks bounty (One Piece Ch_ 957) by bryanfavr on DeviantArt _ Shanks bounty wallpaper, Shanks wanted poster, Shanks wallpaper hd 4k.jpg",
-          "title": "Shanks bounty (One Piece Ch  957) by bryanfavr on DeviantArt   Shanks bounty wallpaper, Shanks wanted poster, Shanks wallpaper hd 4k"
+          "src": "designs/anime/one-piece/wanted-luffy-poster.jpg",
+          "title": "Wanted Luffy Poster"
         },
         {
-          "src": "designs/anime/one-piece/The crew that never gives up on each other__One….jpg",
-          "title": "The crew that never gives up on each other One…"
+          "src": "designs/anime/one-piece/wanted-trafalgar-law.jpg",
+          "title": "Wanted Trafalgar Law"
+        },
+        {
+          "src": "designs/anime/one-piece/zoro-swords.jpg",
+          "title": "Zoro Swords"
         }
       ]
     },
@@ -911,80 +919,80 @@ window.__MANIFEST__ = {
         "accent2": "#8a8a96",
         "accent3": "#0a0a0d"
       },
-      "cover": "designs/anime/death-note/♱.jpg",
+      "cover": "designs/anime/death-note/0-light-x-ryuk.jpg",
       "count": 18,
       "posters": [
         {
-          "src": "designs/anime/death-note/♱.jpg",
-          "title": "♱"
+          "src": "designs/anime/death-note/0-light-x-ryuk.jpg",
+          "title": "Light X Ryuk"
         },
         {
-          "src": "designs/anime/death-note/❀ ˖° poster.jpg",
-          "title": "❀ ˖° poster"
+          "src": "designs/anime/death-note/death-note-BW.jpg",
+          "title": "Death Note BW"
         },
         {
-          "src": "designs/anime/death-note/🖤 Collaboration with @agastya_kalakriti  The game….jpg",
-          "title": "🖤 Collaboration with @agastya Kalakriti  The game…"
+          "src": "designs/anime/death-note/death-note-cover-II.jpg",
+          "title": "Death Note Cover II"
         },
         {
-          "src": "designs/anime/death-note/9359111721026365.jpg",
-          "title": "9359111721026365"
+          "src": "designs/anime/death-note/death-note-cover.jpg",
+          "title": "Death Note Cover"
         },
         {
-          "src": "designs/anime/death-note/13440498884744013.jpg",
-          "title": "13440498884744013"
-        },
-        {
-          "src": "designs/anime/death-note/16466354885157178.jpg",
-          "title": "16466354885157178"
-        },
-        {
-          "src": "designs/anime/death-note/24488391719682949.jpg",
-          "title": "24488391719682949"
-        },
-        {
-          "src": "designs/anime/death-note/35606653300568233.jpg",
-          "title": "35606653300568233"
-        },
-        {
-          "src": "designs/anime/death-note/60517188737363263.jpg",
-          "title": "60517188737363263"
-        },
-        {
-          "src": "designs/anime/death-note/141511613288730825.jpg",
-          "title": "141511613288730825"
-        },
-        {
-          "src": "designs/anime/death-note/270075308903102077.jpg",
-          "title": "270075308903102077"
-        },
-        {
-          "src": "designs/anime/death-note/Death Note L.jpg",
+          "src": "designs/anime/death-note/Death-Note-L.jpg",
           "title": "Death Note L"
         },
         {
-          "src": "designs/anime/death-note/Death Note Minimalist Poster.jpg",
-          "title": "Death Note Minimalist Poster"
+          "src": "designs/anime/death-note/death-note-minimal.jpg",
+          "title": "Death Note Minimal"
         },
         {
-          "src": "designs/anime/death-note/Death Note Posters.jpg",
-          "title": "Death Note Posters"
+          "src": "designs/anime/death-note/L-art.jpg",
+          "title": "L Art"
         },
         {
-          "src": "designs/anime/death-note/L Lawliet.jpg",
+          "src": "designs/anime/death-note/L-Lawliet.jpg",
           "title": "L Lawliet"
         },
         {
-          "src": "designs/anime/death-note/Light yagami confession.jpg",
-          "title": "Light yagami confession"
+          "src": "designs/anime/death-note/L-manga-cover.jpg",
+          "title": "L Manga Cover"
         },
         {
-          "src": "designs/anime/death-note/light yagami.jpg",
-          "title": "Light yagami"
+          "src": "designs/anime/death-note/L-poster-art.jpg",
+          "title": "L Poster Art"
         },
         {
-          "src": "designs/anime/death-note/YAGAMI_SHINIGAMI.jpg",
-          "title": "YAGAMI SHINIGAMI"
+          "src": "designs/anime/death-note/light-confession.jpg",
+          "title": "Light Confession"
+        },
+        {
+          "src": "designs/anime/death-note/light-x-L-cover.jpg",
+          "title": "Light X L Cover"
+        },
+        {
+          "src": "designs/anime/death-note/light-x-L-x-ryuk-manga-art-II.jpg",
+          "title": "Light X L X Ryuk Manga Art II"
+        },
+        {
+          "src": "designs/anime/death-note/light-x-ryuk-fan-art.jpg",
+          "title": "Light X Ryuk Fan Art"
+        },
+        {
+          "src": "designs/anime/death-note/light-x-ryuk-II.jpg",
+          "title": "Light X Ryuk II"
+        },
+        {
+          "src": "designs/anime/death-note/light-x-ryuk-x-l-manga-art.jpg",
+          "title": "Light X Ryuk X L Manga Art"
+        },
+        {
+          "src": "designs/anime/death-note/light-yagami.jpg",
+          "title": "Light Yagami"
+        },
+        {
+          "src": "designs/anime/death-note/misa-amane-vogue.jpg",
+          "title": "Misa Amane Vogue"
         }
       ]
     },
@@ -998,112 +1006,116 @@ window.__MANIFEST__ = {
         "accent2": "#2ee6a8",
         "accent3": "#1a0e08"
       },
-      "cover": "designs/anime/chainsaw-man/37436240650634383.jpg",
-      "count": 26,
+      "cover": "designs/anime/chainsaw-man/0-chainsaw-man.jpg",
+      "count": 27,
       "posters": [
         {
-          "src": "designs/anime/chainsaw-man/37436240650634383.jpg",
-          "title": "37436240650634383"
+          "src": "designs/anime/chainsaw-man/0-chainsaw-man.jpg",
+          "title": "Chainsaw Man"
         },
         {
-          "src": "designs/anime/chainsaw-man/62346776088289338.jpg",
-          "title": "62346776088289338"
+          "src": "designs/anime/chainsaw-man/aki.jpg",
+          "title": "Aki"
         },
         {
-          "src": "designs/anime/chainsaw-man/124623114683511595.jpg",
-          "title": "124623114683511595"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-art-II.jpg",
+          "title": "Chainsaw Man Art II"
         },
         {
-          "src": "designs/anime/chainsaw-man/213921051047497211.jpg",
-          "title": "213921051047497211"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-art-III.jpg",
+          "title": "Chainsaw Man Art III"
         },
         {
-          "src": "designs/anime/chainsaw-man/745697650844302729.jpg",
-          "title": "745697650844302729"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-art.jpg",
+          "title": "Chainsaw Man Art"
         },
         {
-          "src": "designs/anime/chainsaw-man/883550020627869828.jpg",
-          "title": "883550020627869828"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/1057008975059438152.jpg",
-          "title": "1057008975059438152"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/1075093742308996539.jpg",
-          "title": "1075093742308996539"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/1103170871247369498.jpg",
-          "title": "1103170871247369498"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/Anime t-shirt design for sale & custom order.jpg",
-          "title": "Anime t Shirt design for sale & custom order"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/Build Your Power Set_ Tee + Poster + Mug.jpg",
-          "title": "Build Your Power Set  Tee + Poster + Mug"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/Chainsaw Man - Denji poster.jpg",
-          "title": "Chainsaw Man   Denji poster"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/Chainsaw Man by Jordans Archives.jpg",
-          "title": "Chainsaw Man by Jordans Archives"
-        },
-        {
-          "src": "designs/anime/chainsaw-man/Chainsaw Man Design.jpg",
+          "src": "designs/anime/chainsaw-man/Chainsaw-Man-Design.jpg",
           "title": "Chainsaw Man Design"
         },
         {
-          "src": "designs/anime/chainsaw-man/Chainsaw man fan poster.jpg",
-          "title": "Chainsaw man fan poster"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-fan-art.jpg",
+          "title": "Chainsaw Man Fan Art"
         },
         {
-          "src": "designs/anime/chainsaw-man/Chainsaw man poster.jpg",
-          "title": "Chainsaw man poster"
+          "src": "designs/anime/chainsaw-man/Chainsaw-man-fan-poster.jpg",
+          "title": "Chainsaw Man Fan Poster"
         },
         {
-          "src": "designs/anime/chainsaw-man/Chainsaw Man Posters.jpg",
-          "title": "Chainsaw Man Posters"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-manga-cover.jpg",
+          "title": "Chainsaw Man Manga Cover"
         },
         {
-          "src": "designs/anime/chainsaw-man/Chainsaw man.jpg",
-          "title": "Chainsaw man"
+          "src": "designs/anime/chainsaw-man/chainsaw-man-poster-art-2.jpg",
+          "title": "Chainsaw Man Poster Art 2"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/chainsaw-man-poster-art-II.jpg",
+          "title": "Chainsaw Man Poster Art II"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/chainsaw-man-poster-art-III.jpg",
+          "title": "Chainsaw Man Poster Art III"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/Chainsaw-Man-Poster-Art-IV.jpg",
+          "title": "Chainsaw Man Poster Art IV"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/chainsaw-man-poster-art.jpg",
+          "title": "Chainsaw Man Poster Art"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/Chainsaw-man-poster.jpg",
+          "title": "Chainsaw Man Poster"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/Chainsaw-man.jpg",
+          "title": "Chainsaw Man"
         },
         {
           "src": "designs/anime/chainsaw-man/Chainsawman.jpg",
           "title": "Chainsawman"
         },
         {
-          "src": "designs/anime/chainsaw-man/chaisowman.jpg",
-          "title": "Chaisowman"
+          "src": "designs/anime/chainsaw-man/Denji-Chainsaw-Man.jpg",
+          "title": "Denji Chainsaw Man"
         },
         {
-          "src": "designs/anime/chainsaw-man/cover 1.jpg",
-          "title": "Cover 1"
+          "src": "designs/anime/chainsaw-man/denji-poster.jpg",
+          "title": "Denji Poster"
         },
         {
-          "src": "designs/anime/chainsaw-man/Denji - Chainsaw Man.jpg",
-          "title": "Denji   Chainsaw Man"
+          "src": "designs/anime/chainsaw-man/denji.jpg",
+          "title": "Denji"
         },
         {
-          "src": "designs/anime/chainsaw-man/Haven’t made my mind up on this one yet so I’ll….jpg",
-          "title": "Haven’t made my mind up on this one yet so I’ll…"
+          "src": "designs/anime/chainsaw-man/epic-chainsaw-man-visual.jpg",
+          "title": "Epic Chainsaw Man Visual"
         },
         {
-          "src": "designs/anime/chainsaw-man/If you mention how this is basically identical to….jpg",
-          "title": "If you mention how this is basically identical to…"
+          "src": "designs/anime/chainsaw-man/fox-devil.jpg",
+          "title": "Fox Devil"
         },
         {
-          "src": "designs/anime/chainsaw-man/Poster Brutalista de Power__#poster #power #chainsawman #brutalism #animemerch #animeposter #animetee #OtakuStyle #animecollector #animefashion #AnimeShop.jpg",
-          "title": "Poster Brutalista de Power #poster #power #chainsawman #brutalism #animemerch #animeposter #animetee #OtakuStyle #animecollector #animefashion #AnimeShop"
+          "src": "designs/anime/chainsaw-man/majima-poster.jpg",
+          "title": "Majima Poster"
         },
         {
-          "src": "designs/anime/chainsaw-man/Unique Custom Anime T-Shirt – Design Your Dream Tee.jpg",
-          "title": "Unique Custom Anime T Shirt – Design Your Dream Tee"
+          "src": "designs/anime/chainsaw-man/makima-panel.jpg",
+          "title": "Makima Panel"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/makima.jpg",
+          "title": "Makima"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/power-art.jpg",
+          "title": "Power Art"
+        },
+        {
+          "src": "designs/anime/chainsaw-man/power-poster.jpg",
+          "title": "Power Poster"
         }
       ]
     },
@@ -1117,120 +1129,120 @@ window.__MANIFEST__ = {
         "accent2": "#3aa0ff",
         "accent3": "#10141a"
       },
-      "cover": "designs/anime/dragon-ball-z/_ Super Saiyan Art_.jpg",
+      "cover": "designs/anime/dragon-ball-z/0-young-goku-art.jpg",
       "count": 28,
       "posters": [
         {
-          "src": "designs/anime/dragon-ball-z/_ Super Saiyan Art_.jpg",
-          "title": " Super Saiyan Art"
+          "src": "designs/anime/dragon-ball-z/0-young-goku-art.jpg",
+          "title": "Young Goku Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/_Dragon Ball Super_ Super Hero_ presenta primer avance.jpg",
-          "title": "Dragon Ball Super  Super Hero  presenta primer avance"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-art.jpg",
+          "title": "Dragon Ball Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/492649955166266.jpg",
-          "title": "492649955166266"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-cover.jpg",
+          "title": "Dragon Ball Cover"
         },
         {
-          "src": "designs/anime/dragon-ball-z/1266706141015899.jpg",
-          "title": "1266706141015899"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-manga-art.jpg",
+          "title": "Dragon Ball Manga Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/1688918607297399.jpg",
-          "title": "1688918607297399"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-super-cover.jpg",
+          "title": "Dragon Ball Super Cover"
         },
         {
-          "src": "designs/anime/dragon-ball-z/2111131073460838.jpg",
-          "title": "2111131073460838"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-super-hero.jpg",
+          "title": "Dragon Ball Super Hero"
         },
         {
-          "src": "designs/anime/dragon-ball-z/2251868559361643.jpg",
-          "title": "2251868559361643"
+          "src": "designs/anime/dragon-ball-z/dragon-ball-z-minimal.jpg",
+          "title": "Dragon Ball Z Minimal"
         },
         {
-          "src": "designs/anime/dragon-ball-z/3096293491840312.jpg",
-          "title": "3096293491840312"
+          "src": "designs/anime/dragon-ball-z/Dragon-Ball-Z-poster-art.jpg",
+          "title": "Dragon Ball Z Poster Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/3799980931466400.jpg",
-          "title": "3799980931466400"
+          "src": "designs/anime/dragon-ball-z/GOHAN-poster.jpg",
+          "title": "GOHAN Poster"
         },
         {
-          "src": "designs/anime/dragon-ball-z/4433299629934804.jpg",
-          "title": "4433299629934804"
+          "src": "designs/anime/dragon-ball-z/goku-abstract.jpg",
+          "title": "Goku Abstract"
         },
         {
-          "src": "designs/anime/dragon-ball-z/17381148558241856.jpg",
-          "title": "17381148558241856"
+          "src": "designs/anime/dragon-ball-z/goku-art.jpg",
+          "title": "Goku Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/19140367163261905.jpg",
-          "title": "19140367163261905"
+          "src": "designs/anime/dragon-ball-z/goku-manga-art-II.jpg",
+          "title": "Goku Manga Art II"
         },
         {
-          "src": "designs/anime/dragon-ball-z/56717276553053255.jpg",
-          "title": "56717276553053255"
+          "src": "designs/anime/dragon-ball-z/goku-manga-art-III.jpg",
+          "title": "Goku Manga Art III"
         },
         {
-          "src": "designs/anime/dragon-ball-z/76139049948326113.jpg",
-          "title": "76139049948326113"
+          "src": "designs/anime/dragon-ball-z/goku-manga-art.jpg",
+          "title": "Goku Manga Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/126452702033866077.jpg",
-          "title": "126452702033866077"
+          "src": "designs/anime/dragon-ball-z/goku-poster-II.jpg",
+          "title": "Goku Poster II"
         },
         {
-          "src": "designs/anime/dragon-ball-z/DRAGON BALL SUPER HERO Art by PISOCARPA.jpg",
-          "title": "DRAGON BALL SUPER HERO Art by PISOCARPA"
+          "src": "designs/anime/dragon-ball-z/goku-poster-IV.jpg",
+          "title": "Goku Poster IV"
         },
         {
-          "src": "designs/anime/dragon-ball-z/GOKU ABSTRACT WALLPAPER IPHONE LOCKSCREEN 🤩 ssj2.jpg",
-          "title": "GOKU ABSTRACT WALLPAPER IPHONE LOCKSCREEN 🤩 ssj2"
+          "src": "designs/anime/dragon-ball-z/Goku-Poster.jpg",
+          "title": "Goku Poster"
         },
         {
-          "src": "designs/anime/dragon-ball-z/Goku Poster Hd Quality.jpg",
-          "title": "Goku Poster Hd Quality"
+          "src": "designs/anime/dragon-ball-z/goku-saiyyan.jpg",
+          "title": "Goku Saiyyan"
         },
         {
-          "src": "designs/anime/dragon-ball-z/Goku_ O Saiyajin Lendário de Dragon Ball.jpg",
-          "title": "Goku  O Saiyajin Lendário de Dragon Ball"
+          "src": "designs/anime/dragon-ball-z/goku-vs-moro.jpg",
+          "title": "Goku Vs Moro"
+        },
+        {
+          "src": "designs/anime/dragon-ball-z/goku-x-dragon-II.jpg",
+          "title": "Goku X Dragon II"
+        },
+        {
+          "src": "designs/anime/dragon-ball-z/goku-x-dragon.jpg",
+          "title": "Goku X Dragon"
+        },
+        {
+          "src": "designs/anime/dragon-ball-z/goku-x-vegeta.jpg",
+          "title": "Goku X Vegeta"
         },
         {
           "src": "designs/anime/dragon-ball-z/Golu.jpg",
           "title": "Golu"
         },
         {
-          "src": "designs/anime/dragon-ball-z/Guerreiros Z.jpg",
-          "title": "Guerreiros Z"
+          "src": "designs/anime/dragon-ball-z/Kid-Buu-destructive.jpg",
+          "title": "Kid Buu Destructive"
         },
         {
-          "src": "designs/anime/dragon-ball-z/Majin Madness_ Kid Buu Destructive Manga Aesthetic.jpg",
-          "title": "Majin Madness  Kid Buu Destructive Manga Aesthetic"
+          "src": "designs/anime/dragon-ball-z/super-saiyan-art.jpg",
+          "title": "Super Saiyan Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_048_猴儿一样的小悟空.jpg",
-          "title": "龙珠扉页乙土版 048 猴儿一样的小悟空"
+          "src": "designs/anime/dragon-ball-z/young-goku-manga-art-II.jpg",
+          "title": "Young Goku Manga Art II"
         },
         {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_191_倒数十秒.jpg",
-          "title": "龙珠扉页乙土版 191 倒数十秒"
+          "src": "designs/anime/dragon-ball-z/young-goku-manga-art.jpg",
+          "title": "Young Goku Manga Art"
         },
         {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_207_小悟饭怨声载道.jpg",
-          "title": "龙珠扉页乙土版 207 小悟饭怨声载道"
-        },
-        {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_262_贝吉塔与萨博.jpg",
-          "title": "龙珠扉页乙土版 262 贝吉塔与萨博"
-        },
-        {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_286_那美克星战士内鲁.jpg",
-          "title": "龙珠扉页乙土版 286 那美克星战士内鲁"
-        },
-        {
-          "src": "designs/anime/dragon-ball-z/龙珠扉页乙土版_312_怪物弗利萨.jpg",
-          "title": "龙珠扉页乙土版 312 怪物弗利萨"
+          "src": "designs/anime/dragon-ball-z/young-goku.jpg",
+          "title": "Young Goku"
         }
       ]
     },
@@ -1375,76 +1387,76 @@ window.__MANIFEST__ = {
         "accent2": "#d9a441",
         "accent3": "#120a0a"
       },
-      "cover": "designs/anime/fullmetal-alchemist/10_12.jpg",
+      "cover": "designs/anime/fullmetal-alchemist/0-fullmetal-alchemist.jpg",
       "count": 17,
       "posters": [
         {
-          "src": "designs/anime/fullmetal-alchemist/10_12.jpg",
-          "title": "12"
+          "src": "designs/anime/fullmetal-alchemist/0-fullmetal-alchemist.jpg",
+          "title": "Fullmetal Alchemist"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/985231165541679.jpg",
-          "title": "985231165541679"
+          "src": "designs/anime/fullmetal-alchemist/alphonse-elric-art.jpg",
+          "title": "Alphonse Elric Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/1688918607164992.jpg",
-          "title": "1688918607164992"
+          "src": "designs/anime/fullmetal-alchemist/alphonse-elric.jpg",
+          "title": "Alphonse Elric"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/4503668374220531.jpg",
-          "title": "4503668374220531"
+          "src": "designs/anime/fullmetal-alchemist/at-least-there's-always-music-Photo.jpg",
+          "title": "At Least There's Always Music Photo"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/6122149487427718.jpg",
-          "title": "6122149487427718"
+          "src": "designs/anime/fullmetal-alchemist/edward-art-II.jpg",
+          "title": "Edward Art II"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/8022105581636403.jpg",
-          "title": "8022105581636403"
+          "src": "designs/anime/fullmetal-alchemist/edward-art.jpg",
+          "title": "Edward Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/65865213296050131.jpg",
-          "title": "65865213296050131"
-        },
-        {
-          "src": "designs/anime/fullmetal-alchemist/90916486221484256.jpg",
-          "title": "90916486221484256"
-        },
-        {
-          "src": "designs/anime/fullmetal-alchemist/at least there's always music_ Photo.jpg",
-          "title": "At least there's always music  Photo"
-        },
-        {
-          "src": "designs/anime/fullmetal-alchemist/Edward Elric.jpg",
+          "src": "designs/anime/fullmetal-alchemist/Edward-Elric.jpg",
           "title": "Edward Elric"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/Fma.jpg",
-          "title": "Fma"
+          "src": "designs/anime/fullmetal-alchemist/full-metal-alchemist-brotherhood-art.jpg",
+          "title": "Full Metal Alchemist Brotherhood Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/Fullmetal Alchemist Anime Poster_ Brotherhood, Birthday and Christmas Gift (Digital Download).jpg",
-          "title": "Fullmetal Alchemist Anime Poster  Brotherhood, Birthday and Christmas Gift (Digital Download)"
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist-art.jpg",
+          "title": "Fullmetal Alchemist Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/FullMetal Alchemist Brotherhood.jpg",
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist-brotherhood-cover.jpg",
+          "title": "Fullmetal Alchemist Brotherhood Cover"
+        },
+        {
+          "src": "designs/anime/fullmetal-alchemist/FullMetal-Alchemist-Brotherhood.jpg",
           "title": "FullMetal Alchemist Brotherhood"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/Fullmetal Alchemist manga poster.jpg",
-          "title": "Fullmetal Alchemist manga poster"
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist-manga-art.jpg",
+          "title": "Fullmetal Alchemist Manga Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/Fullmetal Alchemist poster.jpg",
-          "title": "Fullmetal Alchemist poster"
+          "src": "designs/anime/fullmetal-alchemist/Fullmetal-Alchemist-manga-poster.jpg",
+          "title": "Fullmetal Alchemist Manga Poster"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/fullmetal alchemist print prints wall poster hd aesthetic.jpg",
-          "title": "Fullmetal alchemist print prints wall poster hd aesthetic"
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist-poster-art.jpg",
+          "title": "Fullmetal Alchemist Poster Art"
         },
         {
-          "src": "designs/anime/fullmetal-alchemist/fullmetal alchemist.jpg",
-          "title": "Fullmetal alchemist"
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist-poster-II.jpg",
+          "title": "Fullmetal Alchemist Poster II"
+        },
+        {
+          "src": "designs/anime/fullmetal-alchemist/Fullmetal-Alchemist-poster.jpg",
+          "title": "Fullmetal Alchemist Poster"
+        },
+        {
+          "src": "designs/anime/fullmetal-alchemist/fullmetal-alchemist.jpg",
+          "title": "Fullmetal Alchemist"
         }
       ]
     },
@@ -1458,64 +1470,60 @@ window.__MANIFEST__ = {
         "accent2": "#e63a3a",
         "accent3": "#0d0a14"
       },
-      "cover": "designs/anime/code-geass/22447698138325546.jpg",
-      "count": 14,
+      "cover": "designs/anime/code-geass/0-code-geass-poster.jpg",
+      "count": 13,
       "posters": [
         {
-          "src": "designs/anime/code-geass/22447698138325546.jpg",
-          "title": "22447698138325546"
+          "src": "designs/anime/code-geass/0-code-geass-poster.jpg",
+          "title": "Code Geass Poster"
         },
         {
-          "src": "designs/anime/code-geass/30540103720810741.jpg",
-          "title": "30540103720810741"
+          "src": "designs/anime/code-geass/code-geass-edit.jpg",
+          "title": "Code Geass Edit"
         },
         {
-          "src": "designs/anime/code-geass/41095415341883642 (1).jpg",
-          "title": "41095415341883642 (1)"
-        },
-        {
-          "src": "designs/anime/code-geass/41095415341883642.jpg",
-          "title": "41095415341883642"
-        },
-        {
-          "src": "designs/anime/code-geass/47710077299846152.jpg",
-          "title": "47710077299846152"
-        },
-        {
-          "src": "designs/anime/code-geass/Code Geass  cuando la tirania es ley , la….jpg",
-          "title": "Code Geass  cuando la tirania es ley , la…"
-        },
-        {
-          "src": "designs/anime/code-geass/code geass _ poster.jpg",
-          "title": "Code geass   poster"
-        },
-        {
-          "src": "designs/anime/code-geass/Code Geass Lelouch.jpg",
+          "src": "designs/anime/code-geass/Code-Geass-Lelouch.jpg",
           "title": "Code Geass Lelouch"
         },
         {
-          "src": "designs/anime/code-geass/code geass poster - Google Search.jpg",
-          "title": "Code geass poster   Google Search"
+          "src": "designs/anime/code-geass/code-geass-manga-cover.jpg",
+          "title": "Code Geass Manga Cover"
         },
         {
-          "src": "designs/anime/code-geass/Code Geass poster (1).jpg",
-          "title": "Code Geass poster (1)"
+          "src": "designs/anime/code-geass/code-geass-poster-2.jpg",
+          "title": "Code Geass Poster 2"
         },
         {
-          "src": "designs/anime/code-geass/Code Geass poster.jpg",
-          "title": "Code Geass poster"
+          "src": "designs/anime/code-geass/Code-Geass-poster-art.jpg",
+          "title": "Code Geass Poster Art"
         },
         {
-          "src": "designs/anime/code-geass/Code Geass, SNIP● SNIP.jpg",
-          "title": "Code Geass, SNIP● SNIP"
+          "src": "designs/anime/code-geass/Code-Geass-poster.jpg",
+          "title": "Code Geass Poster"
         },
         {
-          "src": "designs/anime/code-geass/code geass.jpg",
-          "title": "Code geass"
+          "src": "designs/anime/code-geass/code-geass-zero.jpg",
+          "title": "Code Geass Zero"
         },
         {
-          "src": "designs/anime/code-geass/Lelouch vi Britannia - Code Geass.jpg",
-          "title": "Lelouch vi Britannia   Code Geass"
+          "src": "designs/anime/code-geass/code-geass.jpg",
+          "title": "Code Geass"
+        },
+        {
+          "src": "designs/anime/code-geass/destroy-britannia.jpg",
+          "title": "Destroy Britannia"
+        },
+        {
+          "src": "designs/anime/code-geass/lelouch-poster-art.jpg",
+          "title": "Lelouch Poster Art"
+        },
+        {
+          "src": "designs/anime/code-geass/lelouch.jpg",
+          "title": "Lelouch"
+        },
+        {
+          "src": "designs/anime/code-geass/The-witch-and-the-warlock.jpg",
+          "title": "The Witch And The Warlock"
         }
       ]
     },
@@ -1575,6 +1583,93 @@ window.__MANIFEST__ = {
       ]
     },
     {
+      "id": "spy-x-family",
+      "name": "Spy x Family",
+      "kanji": "スパイファミリー",
+      "tagline": "For the mission. For the family.",
+      "theme": {
+        "accent": "#e86bb5",
+        "accent2": "#57c04a",
+        "accent3": "#140a10"
+      },
+      "cover": "designs/anime/spy-x-family/9359111722558521.jpg",
+      "count": 18,
+      "posters": [
+        {
+          "src": "designs/anime/spy-x-family/9359111722558521.jpg",
+          "title": "9359111722558521"
+        },
+        {
+          "src": "designs/anime/spy-x-family/18014467255856826.jpg",
+          "title": "18014467255856826"
+        },
+        {
+          "src": "designs/anime/spy-x-family/19773685859948941.jpg",
+          "title": "19773685859948941"
+        },
+        {
+          "src": "designs/anime/spy-x-family/98586679345528480.jpg",
+          "title": "98586679345528480"
+        },
+        {
+          "src": "designs/anime/spy-x-family/102456960271310468.jpg",
+          "title": "102456960271310468"
+        },
+        {
+          "src": "designs/anime/spy-x-family/196047390023848573.jpg",
+          "title": "196047390023848573"
+        },
+        {
+          "src": "designs/anime/spy-x-family/382665299614219526.jpg",
+          "title": "382665299614219526"
+        },
+        {
+          "src": "designs/anime/spy-x-family/433330795421847573.jpg",
+          "title": "433330795421847573"
+        },
+        {
+          "src": "designs/anime/spy-x-family/600386194121118951.jpg",
+          "title": "600386194121118951"
+        },
+        {
+          "src": "designs/anime/spy-x-family/666321707418242228.jpg",
+          "title": "666321707418242228"
+        },
+        {
+          "src": "designs/anime/spy-x-family/anya.jpg",
+          "title": "Anya"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Spy X Family (1).jpg",
+          "title": "Spy X Family (1)"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Spy x Family ♡.jpg",
+          "title": "Spy x Family ♡"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Spy x Family.jpg",
+          "title": "Spy x Family"
+        },
+        {
+          "src": "designs/anime/spy-x-family/SPYxFAMILY 🇫🇷 on Twitter.jpg",
+          "title": "SPYxFAMILY 🇫🇷 on Twitter"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Yass Yor.jpg",
+          "title": "Yass Yor"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Yor forger🌸.jpg",
+          "title": "Yor forger🌸"
+        },
+        {
+          "src": "designs/anime/spy-x-family/Подпишись если не сложно в мой тгк _~Шпилька°🪽_.jpg",
+          "title": "Подпишись если не сложно в мой тгк  ~Шпилька°🪽"
+        }
+      ]
+    },
+    {
       "id": "fire-force",
       "name": "Fire Force",
       "kanji": "炎炎ノ消防隊",
@@ -1584,52 +1679,52 @@ window.__MANIFEST__ = {
         "accent2": "#3aa0ff",
         "accent3": "#140a06"
       },
-      "cover": "designs/anime/fire-force/✦.jpg",
+      "cover": "designs/anime/fire-force/0-fire-force.jpg",
       "count": 11,
       "posters": [
         {
-          "src": "designs/anime/fire-force/✦.jpg",
-          "title": "✦"
-        },
-        {
-          "src": "designs/anime/fire-force/9148005520662719.jpg",
-          "title": "9148005520662719"
-        },
-        {
-          "src": "designs/anime/fire-force/11751649023528743.jpg",
-          "title": "11751649023528743"
-        },
-        {
-          "src": "designs/anime/fire-force/21884748185692550.jpg",
-          "title": "21884748185692550"
-        },
-        {
-          "src": "designs/anime/fire-force/FIRE FORCE - Poster Vintage.jpg",
-          "title": "FIRE FORCE   Poster Vintage"
-        },
-        {
-          "src": "designs/anime/fire-force/Fire force (1).jpg",
-          "title": "Fire force (1)"
-        },
-        {
-          "src": "designs/anime/fire-force/Fire Force.jpg",
+          "src": "designs/anime/fire-force/0-fire-force.jpg",
           "title": "Fire Force"
         },
         {
-          "src": "designs/anime/fire-force/KUSAKABE SHINRA🔥.jpg",
-          "title": "KUSAKABE SHINRA🔥"
+          "src": "designs/anime/fire-force/fire-force-anime-poster.jpg",
+          "title": "Fire Force Anime Poster"
         },
         {
-          "src": "designs/anime/fire-force/Safety.jpg",
-          "title": "Safety"
+          "src": "designs/anime/fire-force/fire-force-art.jpg",
+          "title": "Fire Force Art"
         },
         {
-          "src": "designs/anime/fire-force/T-shirt Design ( Anime Character) PNG 4000X5000.jpg",
-          "title": "T Shirt Design ( Anime Character) PNG 4000X5000"
+          "src": "designs/anime/fire-force/fire-force-cover-art.jpg",
+          "title": "Fire Force Cover Art"
         },
         {
-          "src": "designs/anime/fire-force/ғɪʀᴇ ғᴏʀᴄᴇ ᴄᴏᴠᴇʀ.jpg",
-          "title": "Ғɪʀᴇ ғᴏʀᴄᴇ ᴄᴏᴠᴇʀ"
+          "src": "designs/anime/fire-force/fire-force-manga-poster.jpg",
+          "title": "Fire Force Manga Poster"
+        },
+        {
+          "src": "designs/anime/fire-force/fire-force-team.jpg",
+          "title": "Fire Force Team"
+        },
+        {
+          "src": "designs/anime/fire-force/fire-force-vintage.jpg",
+          "title": "Fire Force Vintage"
+        },
+        {
+          "src": "designs/anime/fire-force/Fire-Force.jpg",
+          "title": "Fire Force"
+        },
+        {
+          "src": "designs/anime/fire-force/kusakabe-art.jpg",
+          "title": "Kusakabe Art"
+        },
+        {
+          "src": "designs/anime/fire-force/kusakabe-poster.jpg",
+          "title": "Kusakabe Poster"
+        },
+        {
+          "src": "designs/anime/fire-force/shinra-kusakabe-dark.jpg",
+          "title": "Shinra Kusakabe Dark"
         }
       ]
     },

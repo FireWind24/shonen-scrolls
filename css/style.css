@@ -128,8 +128,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 }
 .nav.scrolled { background: rgba(7, 7, 12, 0.92); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 20px; letter-spacing: 0.14em; }
-.brand img { width: 34px; height: 34px; }
+.brand { display: flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--font-display); font-size: 20px; letter-spacing: 0.14em; }
+.brand img { width: 52px; height: 52px; }
+.brand .brand-text { font-family: 'League Spartan', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: 0.06em; color: var(--ink); white-space: nowrap; line-height: 0.95; }
 .brand .brand-sub { font-family: var(--font-body); font-size: 9px; letter-spacing: 0.5em; color: var(--muted); font-weight: 600; display: block; line-height: 1; margin-top: 3px; }
 .nav-links { display: flex; gap: 6px; }
 .nav-links a {
@@ -202,6 +203,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 }
 .hero h1 .stroke { color: transparent; -webkit-text-stroke: 2px var(--ink); }
 .hero h1 .fill { background: linear-gradient(100deg, #fff 20%, var(--accent) 55%, var(--accent-2) 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero h1 .hero-word { width: auto; height: clamp(190px, 32vw, 320px); filter: drop-shadow(0 24px 70px rgba(255, 46, 77, 0.28)); }
 .hero-sub { max-width: 540px; color: var(--muted); font-size: 18px; margin-top: 26px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 54px; color: var(--muted); font-size: 14px; }
@@ -246,8 +248,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 .anime-card .meta { position: relative; z-index: 2; padding: 20px 22px 24px; margin-top: -58px; }
 .anime-card .meta h3 { font-family: var(--font-display); text-transform: uppercase; font-size: 26px; letter-spacing: 0.03em; }
 .anime-card .meta p { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
-.anime-card .meta .go { position: absolute; right: 20px; bottom: 22px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; transition: 0.3s var(--ease); }
-.anime-card:hover .meta .go { background: var(--a1, var(--accent)); border-color: var(--a1, var(--accent)); color: #fff; transform: translateX(4px); }
+.anime-card:hover .meta h3 { color: var(--a1, var(--accent)); }
 
 /* ---------- sizes section ---------- */
 .sizes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: stretch; }
@@ -488,10 +489,12 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 .lightbox.open { display: flex; }
 .lightbox img { max-width: min(560px, 100%); max-height: 86vh; border-radius: 16px; box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7); animation: pop 0.3s var(--ease); }
 .lightbox .lb-cap { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; color: var(--muted); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; }
-.lightbox .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-strong); background: rgba(18, 18, 28, 0.7); display: grid; place-items: center; transition: 0.2s; }
-.lightbox .lb-nav:hover { border-color: var(--a1); color: var(--a1); }
-.lightbox .lb-prev { left: 22px; }
-.lightbox .lb-next { right: 22px; }
+.lightbox .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-strong); background: rgba(18, 18, 28, 0.7); background-repeat: no-repeat; background-position: center; background-size: 18px; transition: 0.2s; }
+.lightbox .lb-nav:hover { border-color: var(--a1); background-color: var(--a1); }
+.lightbox .lb-prev { left: 22px; background-image: url('../assets/caret-left.svg'); }
+.lightbox .lb-prev:hover { background-image: url('../assets/caret-left-fill.svg'); }
+.lightbox .lb-next { right: 22px; background-image: url('../assets/caret-right.svg'); }
+.lightbox .lb-next:hover { background-image: url('../assets/caret-right-fill.svg'); }
 .lightbox .lb-close { position: absolute; top: 22px; right: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; transition: 0.2s; }
 .lightbox .lb-close:hover { color: var(--danger); border-color: var(--danger); transform: rotate(90deg); }
 

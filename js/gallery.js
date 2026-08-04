@@ -79,7 +79,6 @@
       <div class="meta">
         <h3>${a.name}</h3>
         <p>${a.tagline}</p>
-        <span class="go">→</span>
       </div>
     </a>`;
   }

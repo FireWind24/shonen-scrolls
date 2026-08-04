@@ -114,8 +114,7 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="assets/logo.svg" alt="Shonen Scrolls" />
-            <span>SHONEN<br /><span class="brand-sub">SCROLLS</span></span>
+            <img src="assets/android-chrome-192x192.png" alt="Shonen Scrolls" />
           </a>
           <p class="about">Premium anime posters, hand-printed and shipped to your wall. Pick a series, pick a size, bring it home.</p>
         </div>
@@ -217,9 +216,9 @@
   const LIGHTBOX = `
   <div class="lightbox" id="lightbox" aria-label="Poster preview">
     <button class="lb-close" id="lbClose" aria-label="Close preview">✕</button>
-    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"></button>
     <img id="lbImg" alt="Poster preview" />
-    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next"></button>
     <div class="lb-cap" id="lbCap"></div>
   </div>`;
 
