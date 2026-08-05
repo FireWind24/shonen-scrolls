@@ -75,6 +75,22 @@ const seen = new Set();
 const usedCodes = new Set();
 const animes = [];
 
+/* clean base name: no SKU prefix, no trailing extensions (handles "x.jpg.jpg" leftovers) */
+function baseOf(f) {
+  let name = path.basename(f);
+  name = name.replace(/^[a-z0-9]{1,7}-\d{3}[-_]/i, '');
+  name = name.replace(/(\.[a-zA-Z0-9]+)+$/, '');
+  return name;
+}
+
+/* poster title from the file name: no SKU prefix, no "poster-"/index prefix */
+function titleFrom(f) {
+  let base = baseOf(f);
+  base = base.replace(/^poster[-_]/i, '');
+  base = base.replace(/^\d+[-_]/i, '');
+  return titleCase(base) || 'Poster';
+}
+
 if (fs.existsSync(ANIME_DIR)) {
   for (const id of fs.readdirSync(ANIME_DIR)) {
     const dir = path.join(ANIME_DIR, id);
@@ -84,15 +100,29 @@ if (fs.existsSync(ANIME_DIR)) {
     const m = metaById[id] || null;
     const code = uniqueCode(m, id, usedCodes);
 
-    const posters = fs
+    const files = fs
       .readdirSync(dir)
       .filter((f) => IMG_EXT.has(path.extname(f).toLowerCase()))
-      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
-      .map((f, idx) => ({
-        src: rel(f),
-        title: titleCase(path.basename(f, path.extname(f)).replace(/^(poster[-_]|\d+[-_])/i, '')) || 'Poster',
-        sku: `${code}-${String(idx + 1).padStart(3, '0')}`,
-      }));
+      .sort((a, b) => (baseOf(a) + path.extname(a)).localeCompare(baseOf(b) + path.extname(b), undefined, { numeric: true, sensitivity: 'base' }));
+
+    const posters = files.map((f, idx) => {
+      const sku = `${code}-${String(idx + 1).padStart(3, '0')}`;
+      const ext = path.extname(f);
+      const wanted = `${sku}-${baseOf(f)}${ext}`;
+      let final = f;
+      if (wanted !== f) {
+        const to = path.join(dir, wanted);
+        if (!fs.existsSync(to)) {
+          fs.renameSync(path.join(dir, f), to);
+          final = wanted;
+        }
+      }
+      return {
+        src: rel(final),
+        title: titleFrom(f),
+        sku,
+      };
+    });
 
     if (posters.length === 0) continue;
 
