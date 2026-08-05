@@ -104,8 +104,8 @@
     document.addEventListener('click', (e) => { if (!e.target.closest('.search-wrap')) close(); });
   }
 
-  /* editable: your WhatsApp number for orders, with country code, digits only */
-  const BUSINESS_WHATSAPP = '919999999999';
+  /* editable: your WhatsApp number for orders, with country code, digits only (not set yet) */
+  const BUSINESS_WHATSAPP = '';
 
   /* ----- shared chrome markup ----- */
   const FOOTER = `
@@ -139,7 +139,7 @@
         <div>
           <h4>Studio</h4>
           <div class="footer-social">
-            <a class="social-btn social-wa" href="https://wa.me/${BUSINESS_WHATSAPP}" target="_blank" rel="noopener">
+            <a class="social-btn social-wa" href="https://wa.me/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               <span>WhatsApp</span>
             </a>
@@ -171,7 +171,7 @@
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total"><span class="lbl">Total</span><span class="amt" id="cartTotal">Rs 0</span></div>
-      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout →</button>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout <svg class="btn-caret" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></svg></button>
       <p class="cart-note">A4 Rs 250 · A5 Rs 150 · A6 Rs 100 · Paid on WhatsApp</p>
     </div>
   </aside>`;
@@ -190,15 +190,15 @@
         </div>
         <form id="coFormEl" class="form-grid" novalidate>
           <div class="field"><label for="coName">Full name *</label><input id="coName" name="name" autocomplete="name" placeholder="e.g. Yuji Itadori" /></div>
-          <div class="field"><label for="coPhone">Phone / WhatsApp *</label><input id="coPhone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile" /></div>
+          <div class="field"><label for="coPhone">Phone / WhatsApp *</label><input id="coPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 0300 1234567" /></div>
           <div class="field full"><label for="coAddress">Delivery address *</label><textarea id="coAddress" name="address" autocomplete="street-address" placeholder="House / flat, street, area"></textarea></div>
           <div class="field"><label for="coCity">City *</label><input id="coCity" name="city" autocomplete="address-level2" placeholder="City" /></div>
-          <div class="field"><label for="coPincode">Pincode *</label><input id="coPincode" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="6-digit pincode" /></div>
+          <div class="field"><label for="coPincode">Postal code *</label><input id="coPincode" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="e.g. 46000" /></div>
           <div class="field full"><label for="coNote">Notes (optional)</label><textarea id="coNote" name="notes" placeholder="Anything we should know?"></textarea></div>
         </form>
         <div class="modal-actions">
-          <button class="btn btn-primary btn-block" id="coSubmit">Place order on WhatsApp</button>
-          <button class="btn btn-ghost btn-block" id="coCopy">Copy order summary</button>
+          <button class="btn btn-primary btn-block" id="coSubmit">Place order on WhatsApp <svg class="btn-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.89163 13.2687L9.16582 17.5427L18.7085 8"/></svg></button>
+          <button class="btn btn-ghost btn-block" id="coCopy">Copy order summary <svg class="btn-caret" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.5 2a.5.5 0 0 0-.5.5v12a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-12a.5.5 0 0 0-.5-.5H12a.5.5 0 0 1 0-1h.5A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1H4a.5.5 0 0 1 0 1z"/><path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5"/></svg></button>
         </div>
       </div>
       <div id="coSuccess" style="display:none;">
@@ -211,7 +211,7 @@
           <div class="os-total">Total <span id="coFinalTotal">Rs 0</span></div>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-gold btn-block" id="coAgain">Continue shopping</button>
+          <button class="btn btn-gold btn-block" id="coAgain">Continue shopping <svg class="btn-caret" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/></svg></button>
         </div>
       </div>
     </div>
@@ -252,7 +252,7 @@
     <div class="cart-item" data-key="${key}">
       <img src="${it.src}" alt="${it.title}" loading="lazy" />
       <div class="ci-info">
-        <div class="ci-name">${it.title}</div>
+        <div class="ci-name">${it.title}${it.sku ? ` <span class="ref">${it.sku}</span>` : ''}</div>
         <div class="ci-anime">${it.anime}</div>
         ${note}
         <div><span class="ci-size">${s.label} · ${s.inches}</span></div>

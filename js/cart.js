@@ -37,6 +37,7 @@
         anime: p.anime,
         title: p.title,
         src: p.src,
+        sku: p.sku,
         size,
         qty,
         note: p.note,

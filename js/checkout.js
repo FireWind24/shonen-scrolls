@@ -11,7 +11,8 @@
   function summaryLines(items) {
     return items.map((it, i) => {
       const s = window.SIZES[it.size];
-      let line = `${i + 1}) ${it.title} — ${it.anime}\n   ${s.label} (${s.inches}) × ${it.qty} = ${window.fmt(s.price * it.qty)}`;
+      const ref = it.sku ? ` [${it.sku}]` : '';
+      let line = `${i + 1}) ${it.title}${ref} — ${it.anime}\n   ${s.label} (${s.inches}) × ${it.qty} = ${window.fmt(s.price * it.qty)}`;
       if (it.note) line += `\n   Brief: ${it.note}`;
       if (it.animeId === 'custom') line += `\n   (please send the reference image in this chat)`;
       return line;
@@ -22,9 +23,10 @@
     if (!items.length) return '<div class="os-line" style="color:var(--muted)">Your cart is empty.</div>';
     return items.map((it) => {
       const s = window.SIZES[it.size];
+      const ref = it.sku ? ` <span class="ref">${it.sku}</span>` : '';
       return `
       <div class="os-line">
-        <span>${it.title} · ${s.label}</span>
+        <span>${it.title}${ref} · ${s.label}</span>
         <b>${window.fmt(s.price * it.qty)}</b>
       </div>`;
     }).join('');
@@ -53,13 +55,15 @@
   function validate() {
     const g = (id) => document.getElementById(id).value.trim();
     const name = g('coName'), phone = g('coPhone'), address = g('coAddress'), city = g('coCity'), pincode = g('coPincode');
+    const phoneDigits = phone.replace(/\D/g, '');
+    const pincodeDigits = pincode.replace(/\D/g, '');
     let ok = true;
     const setErr = (id, bad) => { document.getElementById(id).classList.toggle('invalid', bad); if (bad) ok = false; };
     setErr('coName', name.length < 2);
-    setErr('coPhone', !/^\d{10}$/.test(phone));
+    setErr('coPhone', phoneDigits.length < 10 || phoneDigits.length > 13);
     setErr('coAddress', address.length < 8);
     setErr('coCity', city.length < 2);
-    setErr('coPincode', !/^\d{6}$/.test(pincode));
+    setErr('coPincode', pincodeDigits.length < 4 || pincodeDigits.length > 6);
     return ok;
   }
 
@@ -82,7 +86,7 @@
 
   function submitOrder(e) {
     if (e) e.preventDefault();
-    if (!validate()) { window.Shop.toast('Please fill the required fields', 'err'); return; }
+    if (!validate()) { window.Shop.toast('Please check the highlighted fields', 'err'); return; }
     const form = {
       name: document.getElementById('coName').value.trim(),
       phone: document.getElementById('coPhone').value.trim(),

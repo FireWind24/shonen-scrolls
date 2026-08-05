@@ -48,7 +48,31 @@ function titleCase(id) {
 const metaById = {};
 for (const a of meta.animes) metaById[a.id] = a;
 
+function codeFor(m, id) {
+  if (m && m.code) return m.code;
+  return id
+    .split(/[-_]/)
+    .filter((w) => w && !/^\d+$/.test(w))
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase() || id.slice(0, 3).toUpperCase();
+}
+
+/* ensure prefixes stay unique across the whole catalog */
+function uniqueCode(m, id, used) {
+  let code = codeFor(m, id);
+  let base = code;
+  let n = 2;
+  while (used.has(code)) {
+    code = base + n;
+    n++;
+  }
+  used.add(code);
+  return code;
+}
+
 const seen = new Set();
+const usedCodes = new Set();
 const animes = [];
 
 if (fs.existsSync(ANIME_DIR)) {
@@ -57,24 +81,28 @@ if (fs.existsSync(ANIME_DIR)) {
     if (!fs.statSync(dir).isDirectory()) continue;
     const rel = (p) => 'designs/anime/' + id + '/' + p;
 
+    const m = metaById[id] || null;
+    const code = uniqueCode(m, id, usedCodes);
+
     const posters = fs
       .readdirSync(dir)
       .filter((f) => IMG_EXT.has(path.extname(f).toLowerCase()))
       .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
-      .map((f) => ({
+      .map((f, idx) => ({
         src: rel(f),
         title: titleCase(path.basename(f, path.extname(f)).replace(/^(poster[-_]|\d+[-_])/i, '')) || 'Poster',
+        sku: `${code}-${String(idx + 1).padStart(3, '0')}`,
       }));
 
     if (posters.length === 0) continue;
 
-    const m = metaById[id] || null;
     const theme = m
       ? { accent: m.accent, accent2: m.accent2, accent3: m.accent3 }
       : themeForId(id);
 
     animes.push({
       id,
+      code,
       name: m ? m.name : titleCase(id),
       kanji: m ? m.kanji : '',
       tagline: m ? m.tagline : 'New collection — fresh prints every week.',

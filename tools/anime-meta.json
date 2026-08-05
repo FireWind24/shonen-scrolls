@@ -2,6 +2,7 @@
   "animes": [
     {
       "id": "jujutsu-kaisen",
+      "code": "JJK",
       "name": "Jujutsu Kaisen",
       "kanji": "呪術廻戦",
       "tagline": "Curses, sorcery & endless chaos.",
@@ -12,6 +13,7 @@
     },
     {
       "id": "mob-psycho-100",
+      "code": "MP100",
       "name": "Mob Psycho 100",
       "kanji": "モブサイコ100",
       "tagline": "Feelings go beyond 100%.",
@@ -22,6 +24,7 @@
     },
     {
       "id": "demon-slayer",
+      "code": "DS",
       "name": "Demon Slayer",
       "kanji": "鬼滅の刃",
       "tagline": "Burn the night. Slay the demons.",
@@ -32,6 +35,7 @@
     },
     {
       "id": "attack-on-titan",
+      "code": "AOT",
       "name": "Attack on Titan",
       "kanji": "進撃の巨人",
       "tagline": "Shinzou wo sasageyo!",
@@ -42,6 +46,7 @@
     },
     {
       "id": "naruto",
+      "code": "NRT",
       "name": "Naruto",
       "kanji": "ナルト",
       "tagline": "Believe it — the ninja way.",
@@ -52,6 +57,7 @@
     },
     {
       "id": "solo-leveling",
+      "code": "SL",
       "name": "Solo Leveling",
       "kanji": "俺だけレベルアップ",
       "tagline": "Rise from the lowest rank.",
@@ -62,6 +68,7 @@
     },
     {
       "id": "one-piece",
+      "code": "OP",
       "name": "One Piece",
       "kanji": "ワンピース",
       "tagline": "The King of the Pirates is out there.",
@@ -72,6 +79,7 @@
     },
     {
       "id": "my-hero-academia",
+      "code": "MHA",
       "name": "My Hero Academia",
       "kanji": "僕のヒーローアカデミア",
       "tagline": "Go beyond — Plus Ultra!",
@@ -82,6 +90,7 @@
     },
     {
       "id": "bleach",
+      "code": "BCH",
       "name": "Bleach",
       "kanji": "ブリーチ",
       "tagline": "Bankai!",
@@ -92,6 +101,7 @@
     },
     {
       "id": "death-note",
+      "code": "DN",
       "name": "Death Note",
       "kanji": "デスノート",
       "tagline": "I'll take a potato chip... and eat it!",
@@ -102,6 +112,7 @@
     },
     {
       "id": "tokyo-ghoul",
+      "code": "TG",
       "name": "Tokyo Ghoul",
       "kanji": "東京喰種",
       "tagline": "The world is not wrong — it just is.",
@@ -112,6 +123,7 @@
     },
     {
       "id": "chainsaw-man",
+      "code": "CSM",
       "name": "Chainsaw Man",
       "kanji": "チェンソーマン",
       "tagline": "Don't open that door.",
@@ -122,6 +134,7 @@
     },
     {
       "id": "dragon-ball-z",
+      "code": "DBZ",
       "name": "Dragon Ball Z",
       "kanji": "ドラゴンボールZ",
       "tagline": "It's over 9000!",
@@ -132,6 +145,7 @@
     },
     {
       "id": "hunter-x-hunter",
+      "code": "HxH",
       "name": "Hunter x Hunter",
       "kanji": "ハンターハンター",
       "tagline": "But I'm a hunter, remember?",
@@ -142,6 +156,7 @@
     },
     {
       "id": "fullmetal-alchemist",
+      "code": "FMA",
       "name": "Fullmetal Alchemist",
       "kanji": "鋼の錬金術師",
       "tagline": "Equivalent exchange.",
@@ -152,6 +167,7 @@
     },
     {
       "id": "one-punch-man",
+      "code": "OPM",
       "name": "One Punch Man",
       "kanji": "ワンパンマン",
       "tagline": "One punch. That's all it takes.",
@@ -162,6 +178,7 @@
     },
     {
       "id": "code-geass",
+      "code": "CG",
       "name": "Code Geass",
       "kanji": "コードギアス",
       "tagline": "All Hail Lelouch!",
@@ -171,7 +188,8 @@
       "characters": ["Lelouch Lamperouge", "Suzaku Kururugi", "C.C.", "Kallen Stadtfeld", "Rolo", "Euphemia"]
     },
     {
-      "id": "evangelion",
+      "id": "neon-genesis-evangelion",
+      "code": "EVA",
       "name": "Neon Genesis Evangelion",
       "kanji": "新世紀エヴァンゲリオン",
       "tagline": "Shinji, get in the robot.",
@@ -182,6 +200,7 @@
     },
     {
       "id": "vinland-saga",
+      "code": "VS",
       "name": "Vinland Saga",
       "kanji": "ヴィンランド・サガ",
       "tagline": "I have no enemies.",
@@ -191,7 +210,19 @@
       "characters": ["Thorfinn", "Thors", "Canute", "Askeladd", "Einar", "Hild"]
     },
     {
+      "id": "berserk",
+      "code": "BER",
+      "name": "Berserk",
+      "kanji": "ベルセルク",
+      "tagline": "Struggle, endure, contend. For that alone is the sword of one who defies death.",
+      "accent": "#8c2f39",
+      "accent2": "#d9a441",
+      "accent3": "#0c0a0a",
+      "characters": ["Guts", "Griffith", "Casca", "Zodd", "Puck", "Skull Knight"]
+    },
+    {
       "id": "spy-x-family",
+      "code": "SxF",
       "name": "Spy x Family",
       "kanji": "スパイファミリー",
       "tagline": "For the mission. For the family.",
@@ -202,6 +233,7 @@
     },
     {
       "id": "steins-gate",
+      "code": "SG",
       "name": "Steins;Gate",
       "kanji": "シュタインズ・ゲート",
       "tagline": "El Psy Kongroo.",
@@ -212,6 +244,7 @@
     },
     {
       "id": "tokyo-revengers",
+      "code": "TR",
       "name": "Tokyo Revengers",
       "kanji": "東京リベンジャーズ",
       "tagline": "The crybaby hero.",
@@ -222,6 +255,7 @@
     },
     {
       "id": "overlord",
+      "code": "OVL",
       "name": "Overlord",
       "kanji": "オーバーロード",
       "tagline": "All hail the Supreme One.",
@@ -232,6 +266,7 @@
     },
     {
       "id": "re-zero",
+      "code": "RZ",
       "name": "Re:Zero",
       "kanji": "Re:ゼロから始める異世界生活",
       "tagline": "From zero. Again, and again.",
@@ -242,6 +277,7 @@
     },
     {
       "id": "fire-force",
+      "code": "FF",
       "name": "Fire Force",
       "kanji": "炎炎ノ消防隊",
       "tagline": "A blaze of soul!",

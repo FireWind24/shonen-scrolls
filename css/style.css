@@ -114,6 +114,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 .btn-block { width: 100%; }
 .btn[disabled] { opacity: 0.45; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
 .btn .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.btn-caret { width: 18px; height: 18px; flex: none; }
 
 /* ---------- navbar ---------- */
 .nav {
@@ -325,8 +326,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
   box-shadow: 0 10px 26px -8px rgba(220, 39, 67, 0.6);
 }
 .social-ig:hover { filter: brightness(1.1); box-shadow: 0 14px 34px -8px rgba(220, 39, 67, 0.85); }
-.footer-bottom { border-top: 1px solid var(--line); padding: 22px 0; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; color: var(--muted); font-size: 13px; }
-.footer-bottom .kanji { font-family: var(--font-kanji); letter-spacing: 0.2em; }
+.footer-bottom { border-top: 1px solid var(--line); padding: 22px 0; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; color: var(--muted); font-size: 13px; }.footer-bottom .kanji { font-family: var(--font-kanji); letter-spacing: 0.2em; }
 
 /* ============================================================
    ANIME GALLERY PAGE
@@ -381,6 +381,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
   12% { box-shadow: 0 0 0 3px var(--a1), 0 0 60px -6px var(--a1-glow, rgba(255, 46, 77, 0.55)); transform: translateY(-6px) scale(1.01); }
 }
 .poster-card .body .sub { color: var(--muted); font-size: 13px; }
+.ref { font-size: 0.82em; letter-spacing: 0.05em; color: var(--a2, var(--accent-2)); font-weight: 700; white-space: nowrap; }
 
 /* size picker */
 .sizes-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -485,7 +486,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 }
 .field textarea { resize: vertical; min-height: 84px; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--a1, var(--accent)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--a1, var(--accent)) 18%, transparent); }
-.field input.invalid { border-color: var(--danger); }
+.field input.invalid, .field textarea.invalid { border-color: var(--danger); }
 .order-summary { margin-top: 24px; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; background: var(--bg-2); }
 .order-summary h4 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
 .order-summary .os-line { display: flex; justify-content: space-between; font-size: 14px; padding: 7px 0; color: var(--ink-dim); }

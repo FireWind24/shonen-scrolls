@@ -57,7 +57,7 @@
       <div class="body">
         <div>
           ${title}
-          <div class="sub">${anime.name} · Premium matte print</div>
+          <div class="sub">${anime.name} · Premium matte print${p.sku ? ` · <span class="ref">${p.sku}</span>` : ''}</div>
         </div>
         <div class="sizes-pick">${opts2}</div>
         <button class="add-btn" data-idx="${i}">
@@ -100,7 +100,7 @@
         const card = btn.closest('.poster-card');
         const size = card.querySelector('input[type="radio"]:checked').value;
         const it = items[Number(btn.dataset.idx)];
-        window.ShonenCart.add({ animeId: it.anime.id, anime: it.anime.name, title: it.poster.title, src: it.poster.src }, size, 1);
+        window.ShonenCart.add({ animeId: it.anime.id, anime: it.anime.name, title: it.poster.title, src: it.poster.src, sku: it.poster.sku }, size, 1);
         window.Shop.toast(`${it.poster.title} (${size}) added to cart`);
       });
     });
