@@ -153,7 +153,7 @@
       <div class="footer-bottom">
         <span>© ${new Date().getFullYear()} Shonen Scrolls. All rights reserved.</span>
         <span class="kanji">少年巻物</span>
-        <span>Fan-art prints — all series belong to their respective owners.</span>
+        <span>Fan-art prints — all series belong to their respective owners.<br /><span class="credit"><span class="k">Designed by</span> <a href="https://www.instagram.com/umarduino/" target="_blank" rel="noopener">umarduino</a></span></span>
       </div>
     </div>
   </footer>`;
