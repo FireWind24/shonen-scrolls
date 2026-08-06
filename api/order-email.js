@@ -38,7 +38,7 @@ module.exports = async function orderEmail(req, res) {
   const {
     orderId,
     name, phone, address, city, pincode, notes,
-    total, items = [],
+    total, shipping, items = [],
   } = order || {};
 
   if (!orderId || !items.length) {
@@ -99,6 +99,7 @@ module.exports = async function orderEmail(req, res) {
 
     <table style="width:100%;border-collapse:collapse;background:#12121c;border-radius:10px;overflow:hidden;">
       ${itemsRows}
+      ${shipping ? `<tr><td style="padding:8px;font-size:13px;color:#9a97a6;">SHIPPING: ${shipping}</td></tr>` : ''}
       <tr><td style="padding:8px;font-size:14px;font-weight:bold;color:#ffb03a;">TOTAL: ${total}</td></tr>
     </table>
 

@@ -40,7 +40,9 @@
       '— ITEMS —',
       summaryLines(items),
       '',
-      `TOTAL: ${window.fmt(window.ShonenCart.total)}`,
+      `SUBTOTAL: ${window.fmt(window.ShonenCart.total)}`,
+      `SHIPPING: ${window.fmt(window.ShonenCart.shipping)}`,
+      `TOTAL: ${window.fmt(window.ShonenCart.grandTotal)}`,
       '',
       '— DELIVERY —',
       `Name: ${form.name}`,
@@ -67,10 +69,14 @@
     return ok;
   }
 
+  function shipLine() {
+    return `<div class="os-line os-ship"><span>Shipping</span><b>${window.fmt(window.ShonenCart.shipping)}</b></div>`;
+  }
+
   function renderOrderSummary() {
     const items = window.ShonenCart.items;
-    document.getElementById('coSummary').innerHTML = summaryHtml(items);
-    document.getElementById('coTotal').textContent = window.fmt(window.ShonenCart.total);
+    document.getElementById('coSummary').innerHTML = summaryHtml(items) + shipLine();
+    document.getElementById('coTotal').textContent = window.fmt(window.ShonenCart.grandTotal);
   }
 
   function copyText(text) {
@@ -99,12 +105,13 @@
 
     const message = buildMessage(window.ShonenCart.items, form);
     document.getElementById('coOrderId').textContent = orderId;
-    document.getElementById('coFinalSummary').innerHTML = summaryHtml(window.ShonenCart.items);
-    document.getElementById('coFinalTotal').textContent = window.fmt(window.ShonenCart.total);
+    document.getElementById('coFinalSummary').innerHTML = summaryHtml(window.ShonenCart.items) + shipLine();
+    document.getElementById('coFinalTotal').textContent = window.fmt(window.ShonenCart.grandTotal);
 
     /* show success, open WhatsApp, clear cart */
     const orderItems = window.ShonenCart.items;
-    const orderTotal = window.ShonenCart.total;
+    const orderTotal = window.ShonenCart.grandTotal;
+    const orderShip = window.ShonenCart.shipping;
     document.getElementById('coForm').style.display = 'none';
     document.getElementById('coSuccess').style.display = '';
     window.open(`https://wa.me/${window.Shop.whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
@@ -115,6 +122,7 @@
     const payload = {
       orderId,
       total: window.fmt(orderTotal),
+      shipping: window.fmt(orderShip),
       name: form.name, phone: form.phone, address: form.address,
       city: form.city, pincode: form.pincode, notes: form.notes,
       items: orderItems.map((it) => {

@@ -170,9 +170,10 @@
     </div>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
+      <div class="cart-total cart-ship"><span class="lbl">Shipping</span><span class="amt" id="cartShip">Rs 200</span></div>
       <div class="cart-total"><span class="lbl">Total</span><span class="amt" id="cartTotal">Rs 0</span></div>
       <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout <svg class="btn-caret" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></svg></button>
-      <p class="cart-note">A4 Rs 250 · A5 Rs 150 · A6 Rs 100 · Paid on WhatsApp</p>
+      <p class="cart-note">A4 Rs 250 · A5 Rs 150 · A6 Rs 100 · + Rs 200 shipping · Paid on WhatsApp</p>
     </div>
   </aside>`;
 
@@ -270,12 +271,14 @@
   function renderCart(items) {
     const body = $('#cartBody');
     const total = $('#cartTotal');
+    const ship = $('#cartShip');
     const count = $('#cartCount');
     const checkoutBtn = $('#checkoutBtn');
     const clearBtn = $('#cartClear');
     if (!body) return;
     count.textContent = items.length ? window.ShonenCart.count : '';
-    total.textContent = fmt(window.ShonenCart.total);
+    if (ship) ship.textContent = fmt(window.ShonenCart.shipping);
+    total.textContent = fmt(window.ShonenCart.grandTotal);
 
     if (!items.length) {
       if (clearBtn) clearBtn.style.display = 'none';

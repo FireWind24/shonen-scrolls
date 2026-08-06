@@ -7,6 +7,7 @@
 
   const KEY = 'shonen_cart_v1';
   const SIZES = { A4: { label: 'A4', inches: '8" × 12"', price: 250 }, A5: { label: 'A5', inches: '6" × 8"', price: 150 }, A6: { label: 'A6', inches: '4" × 6"', price: 100 } };
+  const SHIPPING = 200;
 
   let items = [];
   const listeners = [];
@@ -63,10 +64,13 @@
     get items() { return items.slice(); },
     get count() { return items.reduce((n, i) => n + i.qty, 0); },
     get total() { return items.reduce((n, i) => n + i.qty * (SIZES[i.size] ? SIZES[i.size].price : 0), 0); },
+    get shipping() { return items.length ? SHIPPING : 0; },
+    get grandTotal() { return this.total + this.shipping; },
     priceOf(size) { return (SIZES[size] || {}).price || 0; },
   };
 
   window.ShonenCart = Cart;
   window.SIZES = SIZES;
+  window.SHIPPING = SHIPPING;
   Cart.init();
 })();
