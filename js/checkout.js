@@ -46,7 +46,7 @@
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
       `Address: ${form.address}`,
-      `${form.city}, ${form.pincode}`,
+      `${form.city}${form.pincode ? ', ' + form.pincode : ''}`,
     ];
     if (form.notes) lines.push(`Notes: ${form.notes}`);
     return lines.join('\n');
@@ -63,7 +63,7 @@
     setErr('coPhone', phoneDigits.length < 10 || phoneDigits.length > 13);
     setErr('coAddress', address.length < 8);
     setErr('coCity', city.length < 2);
-    setErr('coPincode', pincodeDigits.length < 4 || pincodeDigits.length > 6);
+    setErr('coPincode', pincode !== '' && (pincodeDigits.length < 4 || pincodeDigits.length > 6));
     return ok;
   }
 
@@ -103,11 +103,36 @@
     document.getElementById('coFinalTotal').textContent = window.fmt(window.ShonenCart.total);
 
     /* show success, open WhatsApp, clear cart */
+    const orderItems = window.ShonenCart.items;
+    const orderTotal = window.ShonenCart.total;
     document.getElementById('coForm').style.display = 'none';
     document.getElementById('coSuccess').style.display = '';
     window.open(`https://wa.me/${window.Shop.whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     window.ShonenCart.clear();
     window.Shop.toast('Order placed — send it on WhatsApp!');
+
+    /* email the seller the full order with poster attachments */
+    const payload = {
+      orderId,
+      total: window.fmt(orderTotal),
+      name: form.name, phone: form.phone, address: form.address,
+      city: form.city, pincode: form.pincode, notes: form.notes,
+      items: orderItems.map((it) => {
+        const s = window.SIZES[it.size];
+        return {
+          title: it.title, anime: it.anime, sku: it.sku || '', src: it.src || '',
+          size: it.size, sizeLabel: s.label, qty: it.qty, price: s.price,
+        };
+      }),
+    };
+    fetch('/api/order-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then((r) => r.json())
+      .then((d) => window.Shop.toast(d.ok ? 'Email sent to seller ✓' : `Email failed: ${d.error || 'unknown'}`, d.ok ? '' : 'err'))
+      .catch(() => window.Shop.toast('Email failed — not configured on this deploy', 'err'));
   }
 
   function init() {

@@ -193,7 +193,7 @@
           <div class="field"><label for="coPhone">Phone / WhatsApp *</label><input id="coPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 0300 1234567" /></div>
           <div class="field full"><label for="coAddress">Delivery address *</label><textarea id="coAddress" name="address" autocomplete="street-address" placeholder="House / flat, street, area"></textarea></div>
           <div class="field"><label for="coCity">City *</label><input id="coCity" name="city" autocomplete="address-level2" placeholder="City" /></div>
-          <div class="field"><label for="coPincode">Postal code *</label><input id="coPincode" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="e.g. 46000" /></div>
+          <div class="field"><label for="coPincode">Postal code (optional)</label><input id="coPincode" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="e.g. 46000" /></div>
           <div class="field full"><label for="coNote">Notes (optional)</label><textarea id="coNote" name="notes" placeholder="Anything we should know?"></textarea></div>
         </form>
         <div class="modal-actions">
