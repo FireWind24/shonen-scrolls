@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06T02:15:35.396Z",
+  "generated": "2026-08-06T02:41:13.369Z",
   "sizes": {
     "A4": {
       "label": "A4",
@@ -2138,7 +2138,7 @@
         "accent3": "#140a10"
       },
       "cover": "designs/anime/spy-x-family/SxF-001-9359111722558521.jpg",
-      "count": 18,
+      "count": 19,
       "posters": [
         {
           "src": "designs/anime/spy-x-family/SxF-001-9359111722558521.jpg",
@@ -2229,6 +2229,11 @@
           "src": "designs/anime/spy-x-family/SxF-018-Подпишись если не сложно в мой тгк _~Шпилька°🪽_.jpg",
           "title": "Подпишись если не сложно в мой тгк  ~Шпилька°🪽",
           "sku": "SxF-018"
+        },
+        {
+          "src": "designs/anime/spy-x-family/SxF-019-Yor-Forger-Poster.jpg",
+          "title": "Yor Forger Poster",
+          "sku": "SxF-019"
         }
       ]
     },

@@ -91,6 +91,12 @@ function titleFrom(f) {
   return titleCase(base) || 'Poster';
 }
 
+/* existing SKU number from a prefixed filename (e.g. "SxF-019-...") — respected as-is */
+function prefixNum(f) {
+  const m = /^[a-z0-9]{1,7}-(\d{3})[-_]/i.exec(path.basename(f));
+  return m ? parseInt(m[1], 10) : null;
+}
+
 if (fs.existsSync(ANIME_DIR)) {
   for (const id of fs.readdirSync(ANIME_DIR)) {
     const dir = path.join(ANIME_DIR, id);
@@ -103,11 +109,25 @@ if (fs.existsSync(ANIME_DIR)) {
     const files = fs
       .readdirSync(dir)
       .filter((f) => IMG_EXT.has(path.extname(f).toLowerCase()))
-      .sort((a, b) => (baseOf(a) + path.extname(a)).localeCompare(baseOf(b) + path.extname(b), undefined, { numeric: true, sensitivity: 'base' }));
+      .sort((a, b) => {
+        const pa = prefixNum(a), pb = prefixNum(b);
+        if (pa != null && pb != null) return pa - pb;
+        if (pa != null) return -1;
+        if (pb != null) return 1;
+        return (baseOf(a) + path.extname(a)).localeCompare(baseOf(b) + path.extname(b), undefined, { numeric: true, sensitivity: 'base' });
+      });
 
-    const posters = files.map((f, idx) => {
-      const sku = `${code}-${String(idx + 1).padStart(3, '0')}`;
+    let nextNum = 1;
+    for (const f of files) {
+      const p = prefixNum(f);
+      if (p != null && p >= nextNum) nextNum = p + 1;
+    }
+
+    const posters = files.map((f) => {
       const ext = path.extname(f);
+      let num = prefixNum(f);
+      if (num == null) { num = nextNum; nextNum++; }
+      const sku = `${code}-${String(num).padStart(3, '0')}`;
       const wanted = `${sku}-${baseOf(f)}${ext}`;
       let final = f;
       if (wanted !== f) {
