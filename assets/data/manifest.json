@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06T02:41:13.369Z",
+  "generated": "2026-08-06T02:46:09.928Z",
   "sizes": {
     "A4": {
       "label": "A4",
@@ -2138,7 +2138,7 @@
         "accent3": "#140a10"
       },
       "cover": "designs/anime/spy-x-family/SxF-001-9359111722558521.jpg",
-      "count": 19,
+      "count": 20,
       "posters": [
         {
           "src": "designs/anime/spy-x-family/SxF-001-9359111722558521.jpg",
@@ -2234,6 +2234,11 @@
           "src": "designs/anime/spy-x-family/SxF-019-Yor-Forger-Poster.jpg",
           "title": "Yor Forger Poster",
           "sku": "SxF-019"
+        },
+        {
+          "src": "designs/anime/spy-x-family/SxF-020-Yor-Forger-Poster.jpg",
+          "title": "Yor Forger Poster",
+          "sku": "SxF-020"
         }
       ]
     },
