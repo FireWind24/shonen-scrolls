@@ -38,7 +38,7 @@
       const s = sizes[k];
       return `
       <label class="size-opt">
-        <input type="radio" name="size-${key}" value="${k}" ${idx === 1 ? 'checked' : ''} />
+        <input type="radio" name="size-${key}" value="${k}" />
         <span class="opt">
           <span class="opt-icon">${SIZE_ICONS[k] || ''}</span>
           <b>${s.label}</b>
@@ -98,11 +98,20 @@
     container.querySelectorAll('.add-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const card = btn.closest('.poster-card');
-        const size = card.querySelector('input[type="radio"]:checked').value;
+        const checked = card.querySelector('input[type="radio"]:checked');
         const it = items[Number(btn.dataset.idx)];
+        if (!checked) {
+          card.classList.add('needs-size');
+          window.Shop.toast('Please pick a size first');
+          return;
+        }
+        const size = checked.value;
         window.ShonenCart.add({ animeId: it.anime.id, anime: it.anime.name, title: it.poster.title, src: it.poster.src, sku: it.poster.sku }, size, 1);
         window.Shop.toast(`${it.poster.title} (${size}) added to cart`);
       });
+    });
+    container.querySelectorAll('input[type="radio"]').forEach((r) => {
+      r.addEventListener('change', () => { r.closest('.poster-card').classList.remove('needs-size'); });
     });
 
     if (opts.quickEl) {
@@ -112,9 +121,10 @@
           c.classList.add('active');
           const want = c.dataset.size;
           container.querySelectorAll('.poster-card').forEach((card) => {
-            if (!want) { const def = card.querySelector('input[value="A5"]'); if (def) def.checked = true; return; }
-            const r = card.querySelector(`input[value="${want}"]`);
-            if (r) r.checked = true;
+            card.querySelectorAll('input[type="radio"]').forEach((r) => {
+              r.checked = want !== '' && r.value === want;
+            });
+            card.classList.remove('needs-size');
           });
         });
       });
