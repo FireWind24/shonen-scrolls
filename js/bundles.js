@@ -9,34 +9,34 @@
 
   const BUNDLES = [
     {
-      id: 'genin', rank: 1, emoji: '🥷', name: 'Genin Pack',
+      id: 'genin', rank: 1, numeral: 'Ⅰ', name: 'Genin Pack',
       tagline: 'Every legend starts somewhere.',
       posters: 2, price: 500, freeDelivery: false, badge: '',
       features: ['2 × A4 posters'],
     },
     {
-      id: 'chunin', rank: 2, emoji: '⚔️', name: 'Chunin Pack',
+      id: 'chunin', rank: 2, numeral: 'Ⅱ', name: 'Chunin Pack',
       tagline: "You've proven yourself.",
       posters: 5, price: 1000, freeDelivery: false, badge: '',
       features: ['4 × A4 posters', '+1 FREE A4 poster'],
     },
     {
-      id: 'jonin', rank: 3, emoji: '🔥', name: 'Jonin Pack',
+      id: 'jonin', rank: 3, numeral: 'Ⅲ', name: 'Jonin Pack',
       tagline: 'Only the elite reach this rank.',
       posters: 8, price: 1500, freeDelivery: true, badge: 'BEST VALUE',
-      features: ['6 × A4 posters', '+2 FREE A4 posters', '🚚 FREE delivery'],
+      features: ['6 × A4 posters', '+2 FREE A4 posters', 'FREE delivery'],
     },
     {
-      id: 'hokage', rank: 4, emoji: '👑', name: 'Hokage Pack',
+      id: 'hokage', rank: 4, numeral: 'Ⅳ', name: 'Hokage Pack',
       tagline: 'Lead your village... and your wall.',
       posters: 11, price: 2000, freeDelivery: true, badge: 'MOST POPULAR',
-      features: ['8 × A4 posters', '+3 FREE A4 posters', '🚚 FREE delivery', '⚡ Priority processing'],
+      features: ['8 × A4 posters', '+3 FREE A4 posters', 'FREE delivery', 'Priority processing'],
     },
     {
-      id: 'collector', rank: 5, emoji: '💎', name: "Collector's Pack",
+      id: 'collector', rank: 5, numeral: 'Ⅴ', name: "Collector's Pack",
       tagline: 'For the true anime addict.',
       posters: 17, price: 3000, freeDelivery: true, badge: '',
-      features: ['12 × A4 posters', '+5 FREE A4 posters', '🚚 FREE delivery', '⚡ Priority processing', '🎁 1 mystery bonus print'],
+      features: ['12 × A4 posters', '+5 FREE A4 posters', 'FREE delivery', 'Priority processing', '1 mystery bonus print'],
     },
   ];
 
@@ -55,28 +55,29 @@
     hokage: ['#ffce4d', '#fff3c4'],
     collector: ['#c084fc', '#ff7ab8'],
   };
-  const ROMAN = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ'];
-
   const CHECK_ICON = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>';
-  const STACK_ICON = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 6-10 6L2 9z"/><path d="M2 15l10 6 10-6"/></svg>';
   const ARROW_ICON = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
   function cardHtml(b, i) {
     const [a1, a2] = TIERS[b.id] || ['var(--accent)', 'var(--accent-2)'];
+    const tierWord = b.name.replace(/[’']?s? Pack.*$/i, '').toUpperCase();
     return `
     <div class="bundle-card reveal" data-delay="${i % 4}" style="--a1:${a1}; --a2:${a2}">
       ${b.badge ? `<span class="bundle-badge">${b.badge}</span>` : ''}
       <div class="bundle-head">
-        <span class="bundle-rank">Rank ${ROMAN[b.rank - 1] || b.rank}</span>
-        <span class="bundle-emoji">${b.emoji}</span>
+        <span class="bundle-rank">${tierWord} rank</span>
+        <span class="bundle-num">${b.numeral}</span>
       </div>
       <h3 class="bundle-name">${b.name}</h3>
       <p class="bundle-tag">${b.tagline}</p>
-      <div class="bundle-stat">${STACK_ICON}<span><b>${b.posters}</b> A4 posters</span>${b.freeDelivery ? '<em class="bundle-free">FREE DELIVERY</em>' : ''}</div>
+      <div class="bundle-label">What's included</div>
       <ul class="bundle-feats">${b.features.map((f) => `<li>${CHECK_ICON}<span>${f}</span></li>`).join('')}</ul>
       <div class="bundle-pricewrap">
         <span class="bundle-price">${fmt(b.price)}</span>
-        <span class="bundle-per">per pack</span>
+        <span class="bundle-side">
+          ${b.freeDelivery ? '<em class="bundle-free">FREE delivery</em>' : ''}
+          <span class="bundle-per">per pack</span>
+        </span>
       </div>
       <button class="bundle-cta" data-bundle="${b.id}">Pick your posters ${ARROW_ICON}</button>
     </div>`;
@@ -138,7 +139,7 @@
     head.innerHTML = `
       <div class="bp-head">
         <div>
-          <h2>${b.emoji} ${b.name}</h2>
+          <h2>${b.numeral} ${b.name}</h2>
           <p class="sub">${b.tagline}</p>
         </div>
         <div class="bp-head-price">${fmt(b.price)}<small>${b.posters} posters · A4</small></div>

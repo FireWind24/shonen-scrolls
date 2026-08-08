@@ -720,55 +720,43 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 }
 .bundle-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .bundle-rank {
-  display: inline-flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 800;
-  letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+  display: inline-flex; align-items: center; gap: 9px; font-size: 10.5px; font-weight: 800;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
 }
 .bundle-rank::before {
-  content: ""; width: 7px; height: 7px; border-radius: 2px; transform: rotate(45deg); flex: none;
+  content: ""; width: 6px; height: 6px; border-radius: 2px; transform: rotate(45deg); flex: none;
   background: linear-gradient(135deg, var(--a1, var(--accent)), var(--a2, var(--accent-2)));
   box-shadow: 0 0 10px color-mix(in srgb, var(--a1, var(--accent)) 70%, transparent);
 }
-.bundle-emoji {
-  width: 44px; height: 44px; display: grid; place-items: center; font-size: 22px; border-radius: 13px; flex: none;
-  background: color-mix(in srgb, var(--a1, var(--accent)) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--a1, var(--accent)) 26%, transparent);
+.bundle-num {
+  font-family: var(--font-display); font-size: 42px; line-height: 1; flex: none; letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #fff 32%, var(--a1, var(--accent)) 210%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .bundle-name {
-  font-family: var(--font-display); text-transform: uppercase; font-size: 27px; line-height: 1.06;
-  letter-spacing: 0.03em; margin: 2px 0 0;
-  background: linear-gradient(180deg, #fff 36%, var(--a1, var(--accent)) 190%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-family: var(--font-display); text-transform: uppercase; font-size: 28px; line-height: 1.05;
+  letter-spacing: 0.02em; margin: 6px 0 0; color: var(--ink);
 }
 .bundle-tag { font-family: var(--font-kanji); font-style: italic; color: var(--muted); font-size: 14.5px; line-height: 1.5; min-height: 2.15em; margin: 0; }
-.bundle-stat {
-  display: flex; align-items: center; gap: 9px; width: 100%; padding: 9px 12px;
-  border: 1px solid var(--line); border-radius: 12px; background: rgba(255, 255, 255, 0.03);
-  font-size: 12.5px; color: var(--ink-dim);
+.bundle-label {
+  font-size: 10.5px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  margin: 10px 0 2px; padding-top: 12px; border-top: 1px solid var(--line);
 }
-.bundle-stat svg { flex: none; color: var(--a1, var(--accent)); }
-.bundle-stat b { color: var(--ink); font-weight: 800; }
-.bundle-free {
-  margin-left: auto; font-style: normal; font-size: 9.5px; font-weight: 800; letter-spacing: 0.09em;
-  text-transform: uppercase; color: #06281f; padding: 4px 9px; border-radius: 99px;
-  background: linear-gradient(135deg, #3ee6b0, #2acb9a); white-space: nowrap;
-}
-.bundle-feats { list-style: none; margin: 2px 0; display: flex; flex-direction: column; gap: 7px; flex: 1; }
-.bundle-feats li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--ink-dim); line-height: 1.45; }
+.bundle-feats { list-style: none; margin: 2px 0 0; padding-left: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.bundle-feats li { display: flex; align-items: flex-start; gap: 11px; font-size: 14px; font-weight: 600; color: var(--ink-dim); line-height: 1.5; }
 .bundle-feats svg {
-  flex: none; margin-top: 3px; padding: 3px; width: 16px; height: 16px; box-sizing: content-box; border-radius: 50%;
+  flex: none; margin-top: 3px; padding: 3px; width: 17px; height: 17px; box-sizing: content-box; border-radius: 50%;
   color: var(--a1, var(--accent));
-  background: color-mix(in srgb, var(--a1, var(--accent)) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--a1, var(--accent)) 24%, transparent);
+  background: color-mix(in srgb, var(--a1, var(--accent)) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--a1, var(--accent)) 30%, transparent);
 }
 .bundle-pricewrap {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
-  margin-top: 12px; padding-top: 13px; border-top: 1px dashed var(--line);
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;
+  margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
 }
-.bundle-price {
-  font-family: var(--font-display); font-size: 34px; line-height: 1; letter-spacing: 0.02em;
-  background: linear-gradient(180deg, #fff 45%, var(--a1, var(--accent)) 240%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.bundle-price { font-family: var(--font-display); font-size: 34px; line-height: 1; letter-spacing: 0.02em; color: var(--ink); }
+.bundle-side { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+.bundle-free { font-style: normal; font-size: 10.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); }
 .bundle-per { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; }
 .bundle-cta {
   margin-top: 4px; width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
@@ -828,7 +816,8 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.1; }
 /* cart drawer — bundle line */
 .cart-item .ci-thumb.ci-bundle {
   width: 66px; height: 88px; border-radius: 8px; flex: 0 0 66px;
-  border: 1px solid var(--line-strong); background: var(--surface); display: grid; place-items: center; font-size: 30px;
+  border: 1px solid var(--line-strong); background: var(--surface); display: grid; place-items: center;
+  font-family: var(--font-display); font-size: 26px; color: var(--a1, var(--accent));
 }
 .cart-item .ci-picks { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
 .cart-item .ci-picks span {

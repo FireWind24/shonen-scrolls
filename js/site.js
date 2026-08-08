@@ -254,7 +254,7 @@
       ? `<div class="ci-picks">${(it.selections || []).slice(0, 4).map((s) => `<span>${s.sku ? s.sku + ' · ' : ''}${s.title}</span>`).join('')}${it.selections && it.selections.length > 4 ? `<span class="more">+${it.selections.length - 4} more</span>` : ''}</div>`
       : '';
     const thumb = isBundle
-      ? `<div class="ci-thumb ci-bundle">${(window.bundleById && window.bundleById(it.bundleId)) ? window.bundleById(it.bundleId).emoji : '🎴'}</div>`
+      ? `<div class="ci-thumb ci-bundle">${(window.bundleById && window.bundleById(it.bundleId)) ? window.bundleById(it.bundleId).numeral : '—'}</div>`
       : `<img src="${it.src}" alt="${it.title}" loading="lazy" />`;
     return `
     <div class="cart-item" data-key="${key}">
