@@ -104,8 +104,8 @@
     document.addEventListener('click', (e) => { if (!e.target.closest('.search-wrap')) close(); });
   }
 
-  /* editable: your WhatsApp number for orders, with country code, digits only (not set yet) */
-  const BUSINESS_WHATSAPP = '';
+  /* editable: your WhatsApp number for orders, with country code, digits only */
+  const BUSINESS_WHATSAPP = '923215247883';
 
   /* ----- shared chrome markup ----- */
   const FOOTER = `
