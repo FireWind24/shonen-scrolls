@@ -48,19 +48,37 @@
   const fmt = (n) => window.fmt ? window.fmt(n) : 'Rs ' + n;
 
   /* ----- bundle cards on the home page ----- */
+  const TIERS = {
+    genin: ['#ff2e4d', '#ff8a4d'],
+    chunin: ['#ff7a3d', '#ffb03a'],
+    jonin: ['#ffb03a', '#ffe08a'],
+    hokage: ['#ffce4d', '#fff3c4'],
+    collector: ['#c084fc', '#ff7ab8'],
+  };
+  const ROMAN = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ'];
+
+  const CHECK_ICON = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>';
+  const STACK_ICON = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 6-10 6L2 9z"/><path d="M2 15l10 6 10-6"/></svg>';
+  const ARROW_ICON = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
   function cardHtml(b, i) {
+    const [a1, a2] = TIERS[b.id] || ['var(--accent)', 'var(--accent-2)'];
     return `
-    <div class="bundle-card reveal" data-delay="${i % 4}" style="--a1:${b.id === 'hokage' ? '#ffb03a' : b.id === 'jonin' ? '#ff2e4d' : 'var(--accent)'}">
+    <div class="bundle-card reveal" data-delay="${i % 4}" style="--a1:${a1}; --a2:${a2}">
       ${b.badge ? `<span class="bundle-badge">${b.badge}</span>` : ''}
-      <div class="bundle-rank">${b.emoji}</div>
+      <div class="bundle-head">
+        <span class="bundle-rank">Rank ${ROMAN[b.rank - 1] || b.rank}</span>
+        <span class="bundle-emoji">${b.emoji}</span>
+      </div>
       <h3 class="bundle-name">${b.name}</h3>
       <p class="bundle-tag">${b.tagline}</p>
-      <div class="bundle-count">${b.posters} posters · A4</div>
-      <ul class="bundle-feats">${b.features.map((f) => `<li>✓ ${f}</li>`).join('')}</ul>
-      <div class="bundle-price">${fmt(b.price)}</div>
-      <button class="btn btn-primary btn-block" data-bundle="${b.id}">Pick your posters
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
+      <div class="bundle-stat">${STACK_ICON}<span><b>${b.posters}</b> A4 posters</span>${b.freeDelivery ? '<em class="bundle-free">FREE DELIVERY</em>' : ''}</div>
+      <ul class="bundle-feats">${b.features.map((f) => `<li>${CHECK_ICON}<span>${f}</span></li>`).join('')}</ul>
+      <div class="bundle-pricewrap">
+        <span class="bundle-price">${fmt(b.price)}</span>
+        <span class="bundle-per">per pack</span>
+      </div>
+      <button class="bundle-cta" data-bundle="${b.id}">Pick your posters ${ARROW_ICON}</button>
     </div>`;
   }
 
@@ -108,6 +126,12 @@
       $('#bpAdd').addEventListener('click', addBundle);
       $('#bpSearch').addEventListener('input', () => renderGrid2($('#bpSearch').value));
       picker().addEventListener('click', (e) => { if (e.target === picker()) closePicker(); });
+    }
+
+    const tier = TIERS[b.id];
+    if (tier) {
+      picker().style.setProperty('--a1', tier[0]);
+      picker().style.setProperty('--a2', tier[1]);
     }
 
     const head = $('#bpHead');
