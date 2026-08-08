@@ -10,11 +10,17 @@
 
   function summaryLines(items) {
     return items.map((it, i) => {
-      const s = window.SIZES[it.size];
+      const isB = it.animeId === 'bundle';
+      const s = window.SIZES[it.size] || {};
       const ref = it.sku ? ` [${it.sku}]` : '';
-      let line = `${i + 1}) ${it.title}${ref} — ${it.anime}\n   ${s.label} (${s.inches}) × ${it.qty} = ${window.fmt(s.price * it.qty)}`;
+      const price = isB ? it.price : s.price;
+      let line = `${i + 1}) ${it.title}${ref} — ${it.anime}\n   ${isB ? it.posters + ' × A4 posters' : s.label + ' (' + s.inches + ')'} × ${it.qty} = ${window.fmt(price * it.qty)}`;
       if (it.note) line += `\n   Brief: ${it.note}`;
       if (it.animeId === 'custom') line += `\n   (please send the reference image in this chat)`;
+      if (isB && it.selections && it.selections.length) {
+        line += `\n   Posters: ${it.selections.map((x, j) => `${j + 1}) ${x.title}${x.sku ? ' [' + x.sku + ']' : ''}`).join(' · ')}`;
+        if (it.freeDelivery) line += '\n   (FREE delivery included)';
+      }
       return line;
     }).join('\n');
   }
@@ -22,12 +28,14 @@
   function summaryHtml(items) {
     if (!items.length) return '<div class="os-line" style="color:var(--muted)">Your cart is empty.</div>';
     return items.map((it) => {
-      const s = window.SIZES[it.size];
+      const isB = it.animeId === 'bundle';
+      const s = window.SIZES[it.size] || {};
       const ref = it.sku ? ` <span class="ref">${it.sku}</span>` : '';
+      const price = isB ? it.price : s.price;
       return `
       <div class="os-line">
-        <span>${it.title}${ref} · ${s.label}</span>
-        <b>${window.fmt(s.price * it.qty)}</b>
+        <span>${it.title}${ref} · ${isB ? it.posters + ' × A4' : s.label}</span>
+        <b>${window.fmt(price * it.qty)}</b>
       </div>`;
     }).join('');
   }
@@ -70,7 +78,8 @@
   }
 
   function shipLine() {
-    return `<div class="os-line os-ship"><span>Shipping</span><b>${window.fmt(window.ShonenCart.shipping)}</b></div>`;
+    const sh = window.ShonenCart.shipping;
+    return `<div class="os-line os-ship"><span>Shipping</span><b>${sh ? window.fmt(sh) : 'FREE'}</b></div>`;
   }
 
   function renderOrderSummary() {
@@ -122,14 +131,19 @@
     const payload = {
       orderId,
       total: window.fmt(orderTotal),
-      shipping: window.fmt(orderShip),
+      shipping: orderShip ? window.fmt(orderShip) : '',
       name: form.name, phone: form.phone, address: form.address,
       city: form.city, pincode: form.pincode, notes: form.notes,
       items: orderItems.map((it) => {
-        const s = window.SIZES[it.size];
+        const isB = it.animeId === 'bundle';
+        const s = window.SIZES[it.size] || {};
         return {
           title: it.title, anime: it.anime, sku: it.sku || '', src: it.src || '',
-          size: it.size, sizeLabel: s.label, qty: it.qty, price: s.price,
+          size: it.size, sizeLabel: isB ? it.posters + ' posters · A4' : s.label,
+          qty: it.qty, price: it.price != null ? it.price : s.price,
+          detail: it.selections && it.selections.length
+            ? it.selections.map((x) => `${x.title}${x.sku ? ' [' + x.sku + ']' : ''}`).join(', ')
+            : '',
         };
       }),
     };

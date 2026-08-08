@@ -22,7 +22,7 @@
     listeners.forEach((fn) => fn(items));
   }
 
-  function keyOf(it) { return `${it.animeId}::${it.src}::${it.size}`; }
+  function keyOf(it) { return `${it.animeId}::${it.bundleId || it.src}::${it.size}`; }
 
   const Cart = {
     init() { load(); },
@@ -46,6 +46,27 @@
       save();
     },
 
+    addBundle(b, selections) {
+      const existing = items.find((i) => i.animeId === 'bundle' && i.bundleId === b.id);
+      const item = {
+        animeId: 'bundle',
+        bundleId: b.id,
+        anime: 'Shonen Scrolls — Bundles',
+        title: b.name,
+        src: '',
+        sku: 'BND-' + b.id.toUpperCase(),
+        size: 'A4',
+        qty: 1,
+        price: b.price,
+        posters: b.posters,
+        freeDelivery: !!b.freeDelivery,
+        selections: selections || [],
+      };
+      if (existing) Object.assign(existing, item);
+      else items.push(item);
+      save();
+    },
+
     setQty(key, qty) {
       const it = items.find((i) => keyOf(i) === key);
       if (!it) return;
@@ -63,8 +84,8 @@
 
     get items() { return items.slice(); },
     get count() { return items.reduce((n, i) => n + i.qty, 0); },
-    get total() { return items.reduce((n, i) => n + i.qty * (SIZES[i.size] ? SIZES[i.size].price : 0), 0); },
-    get shipping() { return items.length ? SHIPPING : 0; },
+    get total() { return items.reduce((n, i) => n + i.qty * (i.price != null ? i.price : (SIZES[i.size] ? SIZES[i.size].price : 0)), 0); },
+    get shipping() { return items.length && !items.some((i) => i.freeDelivery) ? SHIPPING : 0; },
     get grandTotal() { return this.total + this.shipping; },
     priceOf(size) { return (SIZES[size] || {}).price || 0; },
   };

@@ -80,7 +80,8 @@ module.exports = async function orderEmail(req, res) {
   const itemsRows = items.map((it, i) => {
     const s = it.sizeLabel || it.size;
     const ref = it.sku ? ` [${it.sku}]` : '';
-    const line = `${i + 1}) ${it.title}${ref} — ${it.anime}<br/>${s} × ${it.qty} = ${it.price}`;
+    const detail = it.detail ? `<br/><span style="color:#9a97a6;">▸ ${it.detail}</span>` : '';
+    const line = `${i + 1}) ${it.title}${ref} — ${it.anime}<br/>${s} × ${it.qty} = ${it.price}${detail}`;
     return `<tr><td style="padding:6px 8px;border-bottom:1px solid #2a2a3a;font-size:13px;">${line}</td></tr>`;
   }).join('');
 

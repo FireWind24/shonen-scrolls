@@ -246,18 +246,26 @@
   function closeCart() { cartDrawer() && cartDrawer().classList.remove('open'); $('#overlay') && $('#overlay').classList.remove('open'); document.body.style.overflow = ''; }
 
   function cartItemHtml(it) {
-    const s = window.SIZES[it.size];
-    const key = `${it.animeId}::${it.src}::${it.size}`;
+    const isBundle = it.animeId === 'bundle';
+    const s = window.SIZES[it.size] || {};
+    const key = `${it.animeId}::${it.bundleId || it.src}::${it.size}`;
     const note = it.note ? `<div class="ci-note">${it.note}</div>` : '';
+    const pickList = isBundle
+      ? `<div class="ci-picks">${(it.selections || []).slice(0, 4).map((s) => `<span>${s.sku ? s.sku + ' · ' : ''}${s.title}</span>`).join('')}${it.selections && it.selections.length > 4 ? `<span class="more">+${it.selections.length - 4} more</span>` : ''}</div>`
+      : '';
+    const thumb = isBundle
+      ? `<div class="ci-thumb ci-bundle">${(window.bundleById && window.bundleById(it.bundleId)) ? window.bundleById(it.bundleId).emoji : '🎴'}</div>`
+      : `<img src="${it.src}" alt="${it.title}" loading="lazy" />`;
     return `
     <div class="cart-item" data-key="${key}">
-      <img src="${it.src}" alt="${it.title}" loading="lazy" />
+      ${thumb}
       <div class="ci-info">
         <div class="ci-name">${it.title}${it.sku ? ` <span class="ref">${it.sku}</span>` : ''}</div>
-        <div class="ci-anime">${it.anime}</div>
+        <div class="ci-anime">${isBundle ? 'Shonen Scrolls Bundles' : it.anime}</div>
         ${note}
-        <div><span class="ci-size">${s.label} · ${s.inches}</span></div>
-        <div class="ci-price">${fmt(s.price)} × ${it.qty} = ${fmt(s.price * it.qty)}</div>
+        ${pickList}
+        <div><span class="ci-size">${isBundle ? it.posters + ' × A4 posters' : s.label + ' · ' + s.inches}</span></div>
+        <div class="ci-price">${fmt(it.price != null ? it.price : s.price)} × ${it.qty} = ${fmt((it.price != null ? it.price : s.price) * it.qty)}</div>
         <div class="ci-qty">
           <button class="qty-min" data-dir="-1" aria-label="Decrease">−</button>
           <span>${it.qty}</span>
@@ -277,7 +285,7 @@
     const clearBtn = $('#cartClear');
     if (!body) return;
     count.textContent = items.length ? window.ShonenCart.count : '';
-    if (ship) ship.textContent = fmt(window.ShonenCart.shipping);
+    if (ship) ship.textContent = window.ShonenCart.shipping ? fmt(window.ShonenCart.shipping) : 'FREE';
     total.textContent = fmt(window.ShonenCart.grandTotal);
 
     if (!items.length) {
@@ -302,7 +310,7 @@
     body.querySelectorAll('.qty-min, .qty-plus').forEach((b) => {
       b.addEventListener('click', () => {
         const key = b.closest('.cart-item').dataset.key;
-        const it = items.find((i) => `${i.animeId}::${i.src}::${i.size}` === key);
+        const it = items.find((i) => `${i.animeId}::${i.bundleId || i.src}::${i.size}` === key);
         if (it) window.ShonenCart.setQty(key, it.qty + Number(b.dataset.dir));
       });
     });
