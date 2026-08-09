@@ -2,10 +2,15 @@
  * tools/pricing.js
  * Shared Node module — parses assets/prices.csv (the single source of
  * truth for every price on the site) into a pricing object:
- *   { sizes: {CODE:{label,detail,price}}, shipping: 200, bundles: [...] }
- * Used by tools/update-prices.js (generates js/pricing.js) and
- * tools/generate-manifest.js (sizes block of the manifest) so both
- * always read from the one CSV.
+ *   { sizes: {CODE:{label,detail,price}}, shipping: 200, bundlePrices: {id: price} }
+ * The CSV is a simple flat price list:
+ *     item,price (Rs)
+ *     A4 poster,250
+ *     ...
+ * Only PRICES live in the sheet — sizes/packs are defined by the code
+ * (DEFAULT_SIZES here, the BUNDLES array in js/bundles.js) and their
+ * prices are overridden from the CSV. That keeps the sheet dead simple.
+ * Used by tools/update-prices.js (generates js/pricing.js).
  */
 'use strict';
 const fs = require('fs');
@@ -17,6 +22,20 @@ const DEFAULT_SIZES = {
   A4: { label: 'A4', detail: '8x12 inches', price: 250 },
   A5: { label: 'A5', detail: '6x8 inches', price: 150 },
   A6: { label: 'A6', detail: '4x6 inches', price: 100 },
+};
+
+/* which rows the site understands — item name (lowercased) -> what it is.
+   The seller keeps these exact names; unknown rows are skipped with a warning. */
+const KNOWN_ITEMS = {
+  'a4 poster': { type: 'size', id: 'A4' },
+  'a5 poster': { type: 'size', id: 'A5' },
+  'a6 poster': { type: 'size', id: 'A6' },
+  'shipping per order': { type: 'shipping' },
+  'genin pack': { type: 'bundle', id: 'genin' },
+  'chunin pack': { type: 'bundle', id: 'chunin' },
+  'jonin pack': { type: 'bundle', id: 'jonin' },
+  'hokage pack': { type: 'bundle', id: 'hokage' },
+  "collector's pack": { type: 'bundle', id: 'collector' },
 };
 
 /* minimal RFC-4180 CSV parser (handles quoted fields, embedded commas) */
@@ -42,14 +61,6 @@ function parseRows(text) {
   return rows.filter((r) => r.some((c) => c.trim() !== ''));
 }
 
-function romanize(n) {
-  if (!Number.isInteger(n) || n < 1) return String(n);
-  if (n > 39) return String(n);
-  /* composed Unicode roman numerals (Ⅰ Ⅱ Ⅲ Ⅳ ... Ⅹ) to match the UI */
-  const DIGIT = { 0: '', 1: 'Ⅰ', 2: 'Ⅱ', 3: 'Ⅲ', 4: 'Ⅳ', 5: 'Ⅴ', 6: 'Ⅵ', 7: 'Ⅶ', 8: 'Ⅷ', 9: 'Ⅸ' };
-  return 'Ⅹ'.repeat(Math.floor(n / 10)) + DIGIT[n % 10];
-}
-
 function asNumber(v) {
   const s = String(v || '').replace(/[, ]/g, '');
   if (!s) return null;
@@ -57,68 +68,43 @@ function asNumber(v) {
   return Number.isFinite(n) ? n : null;
 }
 
-function asBool(v) {
-  return /^(yes|true|y|1)$/i.test(String(v).trim());
-}
-
 function loadPricing() {
-  const result = { sizes: {}, shipping: 200, bundles: [], shippingNote: '' };
+  const result = {
+    sizes: {},
+    shipping: 200,
+    shippingNote: '',
+    bundlePrices: {},
+  };
+  for (const [code, d] of Object.entries(DEFAULT_SIZES)) {
+    result.sizes[code] = { label: d.label, detail: d.detail, price: d.price };
+  }
   if (!fs.existsSync(CSV_FILE)) return result;
 
   let text = fs.readFileSync(CSV_FILE, 'utf8');
   if (text.charCodeAt(0) === 0xfeff) text = text.slice(1); /* strip BOM */
 
-  /* The CSV is organized as small stacked tables, each headed by a
-     section marker line (SIZES / SHIPPING / BUNDLES), a header line,
-     then data rows. Spreadsheet-safe: no comment lines to mangle. */
   const rows = parseRows(text);
-  let section = '';
-  let skipNext = false;
-
   for (const r of rows) {
-    const cells = r.map((c) => c.trim());
-    if (!cells.some(Boolean)) continue;
+    const item = String(r[0] || '').trim();
+    const price = asNumber(r[1]);
+    if (!item || !price) continue;
 
-    if (cells.length === 1 && /^(sizes|shipping|bundles)$/i.test(cells[0])) {
-      section = cells[0].toLowerCase();
-      skipNext = true; /* the next row is that section's header */
+    const known = KNOWN_ITEMS[item.toLowerCase()];
+    if (!known) {
+      console.warn('[pricing] skipping unknown item in prices.csv:', item);
       continue;
     }
-    if (skipNext) { skipNext = false; continue; }
-    if (!section) continue;
-
-    const priceCol = section === 'shipping' ? 1 : 3;
-    const price = asNumber(cells[priceCol]);
-
-    if (section === 'sizes') {
-      if (!cells[0] || price === null) continue;
-      result.sizes[cells[0]] = { label: cells[1] || cells[0], inches: cells[2] || '', price };
-    } else if (section === 'shipping') {
-      if (price === null) continue;
+    if (known.type === 'size') {
+      result.sizes[known.id].price = price;
+    } else if (known.type === 'shipping') {
       result.shipping = price;
-      result.shippingNote = cells[0];
-    } else if (section === 'bundles') {
-      const posters = asNumber(cells[2]);
-      if (!cells[0] || price === null || !posters) continue;
-      result.bundles.push({
-        id: cells[0],
-        name: cells[1] || cells[0],
-        posters,
-        price,
-        freeDelivery: asBool(cells[4]),
-        badge: cells[5],
-        tagline: cells[6],
-        features: (cells[7] || '').split(/\s*\|\s*/).filter(Boolean),
-      });
+      result.shippingNote = item;
+    } else {
+      result.bundlePrices[known.id] = price;
     }
   }
-
-  result.bundles.forEach((b, i) => {
-    b.rank = i + 1;
-    b.numeral = romanize(i + 1);
-  });
 
   return result;
 }
 
-module.exports = { loadPricing, parseRows, romanize, DEFAULT_SIZES, CSV_FILE };
+module.exports = { loadPricing, parseRows, DEFAULT_SIZES, KNOWN_ITEMS, CSV_FILE };

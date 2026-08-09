@@ -1,17 +1,10 @@
-﻿SIZES
-size,label,inches,price (Rs)
-A4,A4,8x12 inches,250
-A5,A5,6x8 inches,150
-A6,A6,4x6 inches,100
-
-SHIPPING
-label,price (Rs)
-Flat delivery per order,200
-
-BUNDLES
-pack,pack name,posters,price (Rs),free delivery,badge,tagline,features
-genin,Genin Pack,2,500,no,,Every legend starts somewhere.,2 × A4 posters
-chunin,Chunin Pack,5,1000,no,,You've proven yourself.,4 × A4 posters |+1 FREE A4 poster
-jonin,Jonin Pack,8,1500,yes,BEST VALUE,Only the elite reach this rank.,6 × A4 posters |+2 FREE A4 posters |FREE delivery
-hokage,Hokage Pack,11,2000,yes,MOST POPULAR,Lead your village... and your wall.,8 × A4 posters |+3 FREE A4 posters |FREE delivery |Priority processing
-collector,Collector's Pack,17,3000,yes,,For the true anime addict.,12 × A4 posters |+5 FREE A4 posters |FREE delivery |Priority processing |1 mystery bonus print
+﻿item,price (Rs)
+A4 poster,250
+A5 poster,150
+A6 poster,100
+Shipping per order,200
+Genin Pack,500
+Chunin Pack,1000
+Jonin Pack,1500
+Hokage Pack,2000
+Collector's Pack,3000

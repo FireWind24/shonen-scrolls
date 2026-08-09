@@ -41,10 +41,14 @@
     },
   ];
 
-  /* prices.csv is the source of truth; when js/pricing.js is present its
-     bundle list (with the seller's current prices) replaces these defaults */
-  if (PR.bundles && Array.isArray(PR.bundles) && PR.bundles.length) {
-    BUNDLES = PR.bundles;
+  /* prices.csv is the source of truth for PRICES; bundle descriptions
+     (posters, features, taglines, badges, free delivery) live here.
+     When js/pricing.js is present, its per-pack prices override defaults. */
+  if (PR.bundlePrices && typeof PR.bundlePrices === 'object') {
+    BUNDLES.forEach((b) => {
+      const n = PR.bundlePrices[b.id];
+      if (typeof n === 'number' && Number.isFinite(n)) b.price = n;
+    });
   }
 
   window.BUNDLES = BUNDLES;
