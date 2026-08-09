@@ -8,6 +8,11 @@
 const fs = require('fs');
 const path = require('path');
 const meta = require('./anime-meta.json');
+const priceSizes = {
+  A4: { label: 'A4', inches: '8" × 12"', price: 250 },
+  A5: { label: 'A5', inches: '6" × 8"', price: 150 },
+  A6: { label: 'A6', inches: '4" × 6"', price: 100 },
+};
 
 const ROOT = path.join(__dirname, '..');
 const ANIME_DIR = path.join(ROOT, 'designs', 'anime');
@@ -174,13 +179,17 @@ for (const a of meta.animes) {
 for (const a of animes) if (!seen.has(a.id) || !ordered.includes(a)) ordered.push(a);
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
+const pricing = require('./pricing');
+const prices = pricing.loadPricing();
 const manifest = {
   generated: new Date().toISOString(),
-  sizes: {
-    A4: { label: 'A4', inches: '8" × 12"', price: 250 },
-    A5: { label: 'A5', inches: '6" × 8"', price: 150 },
-    A6: { label: 'A6', inches: '4" × 6"', price: 100 },
-  },
+  sizes: (function () {
+    const s = Object.assign({}, priceSizes);
+    s.A4 = prices.sizes.A4 || s.A4;
+    s.A5 = prices.sizes.A5 || s.A5;
+    s.A6 = prices.sizes.A6 || s.A6;
+    return s;
+  })(),
   animes: ordered,
 };
 

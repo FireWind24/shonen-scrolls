@@ -1,19 +1,19 @@
 window.__MANIFEST__ = {
-  "generated": "2026-08-06T02:46:09.928Z",
+  "generated": "2026-08-09T09:49:26.626Z",
   "sizes": {
     "A4": {
       "label": "A4",
-      "inches": "8\" × 12\"",
+      "inches": "8x12 inches",
       "price": 250
     },
     "A5": {
       "label": "A5",
-      "inches": "6\" × 8\"",
+      "inches": "6x8 inches",
       "price": 150
     },
     "A6": {
       "label": "A6",
-      "inches": "4\" × 6\"",
+      "inches": "4x6 inches",
       "price": 100
     }
   },

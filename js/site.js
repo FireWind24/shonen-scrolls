@@ -284,6 +284,11 @@
     const checkoutBtn = $('#checkoutBtn');
     const clearBtn = $('#cartClear');
     if (!body) return;
+    const note = $('.cart-note');
+    if (note) {
+      const bits = Object.keys(window.SIZES).map((k) => `${window.SIZES[k].label} ${fmt(window.SIZES[k].price)}`);
+      note.textContent = `${bits.join(' · ')} · + ${fmt(window.SHIPPING)} shipping · Paid on WhatsApp`;
+    }
     count.textContent = items.length ? window.ShonenCart.count : '';
     if (ship) ship.textContent = window.ShonenCart.shipping ? fmt(window.ShonenCart.shipping) : 'FREE';
     total.textContent = fmt(window.ShonenCart.grandTotal);

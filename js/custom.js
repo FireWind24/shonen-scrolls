@@ -27,12 +27,20 @@
   }
 
   function init() {
-    /* poster size icons (shared with the gallery size pickers) */
+    /* "from" price = cheapest print size */
+    const heroPrice = document.getElementById('heroPrice');
+    if (heroPrice) heroPrice.textContent = window.fmt(Math.min(...Object.values(window.SIZES).map((s) => s.price)));
+
+    /* poster size icons + prices (shared with the gallery size pickers) */
     document.querySelectorAll('#cdSizes .size-opt').forEach((label) => {
       const inp = label.querySelector('input');
+      const optPrice = label.querySelector('.opt-price');
       const icon = label.querySelector('.opt-icon');
+      if (inp && optPrice && window.SIZES[inp.value]) optPrice.textContent = window.fmt(window.SIZES[inp.value].price);
       if (inp && icon && window.SIZE_ICONS && window.SIZE_ICONS[inp.value]) icon.innerHTML = window.SIZE_ICONS[inp.value];
     });
+
+    updateTotal();
 
     const brief = $('#cdBrief');
     const file = $('#cdFile');

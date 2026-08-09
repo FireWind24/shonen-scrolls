@@ -82,6 +82,10 @@
     /* sizes */
     buildSizes(store.sizes || window.SIZES);
 
+    /* "from" price = cheapest print size */
+    const heroPrice = document.getElementById('heroPrice');
+    if (heroPrice) heroPrice.textContent = window.fmt(Math.min(...Object.values(window.SIZES).map((s) => s.price)));
+
     /* poster stack */
     const stack = [document.getElementById('stackP1'), document.getElementById('stackP2'), document.getElementById('stackP3')];
     const pick = [0, 1, 2];

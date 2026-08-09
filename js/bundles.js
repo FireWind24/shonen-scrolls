@@ -7,7 +7,8 @@
 (function () {
   'use strict';
 
-  const BUNDLES = [
+  const PR = (typeof window !== 'undefined' && window.__PRICES__) || {};
+  let BUNDLES = [
     {
       id: 'genin', rank: 1, numeral: 'Ⅰ', name: 'Genin Pack',
       tagline: 'Every legend starts somewhere.',
@@ -39,6 +40,12 @@
       features: ['12 × A4 posters', '+5 FREE A4 posters', 'FREE delivery', 'Priority processing', '1 mystery bonus print'],
     },
   ];
+
+  /* prices.csv is the source of truth; when js/pricing.js is present its
+     bundle list (with the seller's current prices) replaces these defaults */
+  if (PR.bundles && Array.isArray(PR.bundles) && PR.bundles.length) {
+    BUNDLES = PR.bundles;
+  }
 
   window.BUNDLES = BUNDLES;
   window.bundleById = (id) => BUNDLES.find((b) => b.id === id);
