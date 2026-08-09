@@ -80,7 +80,7 @@
     buildAnimeGrid(animes);
 
     /* sizes */
-    buildSizes(store.sizes || window.SIZES);
+    buildSizes(window.SIZES);
 
     /* "from" price = cheapest print size */
     const heroPrice = document.getElementById('heroPrice');

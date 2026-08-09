@@ -15,6 +15,12 @@
   const SIZES = PR.sizes && Object.keys(PR.sizes).length ? PR.sizes : DEFAULT_SIZES;
   const SHIPPING = typeof PR.shipping === 'number' ? PR.shipping : 200;
 
+  /* SIZES is the single live price table on the page; cart totals always
+     read the current one so the drawer can never drift from the pickers */
+  function liveSizes() {
+    return (window.SIZES && Object.keys(window.SIZES).length) ? window.SIZES : SIZES;
+  }
+
   let items = [];
   const listeners = [];
 
@@ -90,10 +96,10 @@
 
     get items() { return items.slice(); },
     get count() { return items.reduce((n, i) => n + i.qty, 0); },
-    get total() { return items.reduce((n, i) => n + i.qty * (i.price != null ? i.price : (SIZES[i.size] ? SIZES[i.size].price : 0)), 0); },
+    get total() { return items.reduce((n, i) => n + i.qty * (i.price != null ? i.price : (liveSizes()[i.size] ? liveSizes()[i.size].price : 0)), 0); },
     get shipping() { return items.length && !items.some((i) => i.freeDelivery) ? SHIPPING : 0; },
     get grandTotal() { return this.total + this.shipping; },
-    priceOf(size) { return (SIZES[size] || {}).price || 0; },
+    priceOf(size) { return (liveSizes()[size] || {}).price || 0; },
   };
 
   window.ShonenCart = Cart;

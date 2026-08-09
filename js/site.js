@@ -363,9 +363,8 @@
         const res = await fetch('assets/data/manifest.json', { cache: 'no-cache' });
         if (!res.ok) throw new Error('manifest fetch failed');
         window.STORE = await res.json();
-        window.SIZES = window.STORE.sizes || window.SIZES;
       } catch (e) {
-        window.STORE = { sizes: window.SIZES, animes: [] };
+        window.STORE = { animes: [] };
         toast('Could not load the library. Run <b>node tools/generate-manifest.js</b> and refresh.', 'err');
       }
     }

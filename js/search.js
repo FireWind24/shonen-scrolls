@@ -8,7 +8,7 @@
 
   const $ = (s) => document.querySelector(s);
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-  const sizes = () => (window.STORE ? window.STORE.sizes : window.SIZES) || window.SIZES;
+  const sizes = () => window.SIZES || {};
 
   let animes = () => (window.STORE && window.STORE.animes) || [];
 

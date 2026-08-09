@@ -12,7 +12,7 @@
 
   function init({ detail: store }) {
     const animes = store.animes || [];
-    const sizes = store.sizes || window.SIZES;
+    const sizes = window.SIZES;
     const id = new URLSearchParams(location.search).get('anime');
     const anime = animes.find((a) => a.id === id);
 

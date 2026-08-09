@@ -51,7 +51,9 @@ function romanize(n) {
 }
 
 function asNumber(v) {
-  const n = Number(String(v || '').replace(/[, ]/g, ''));
+  const s = String(v || '').replace(/[, ]/g, '');
+  if (!s) return null;
+  const n = Number(s);
   return Number.isFinite(n) ? n : null;
 }
 
@@ -63,44 +65,50 @@ function loadPricing() {
   const result = { sizes: {}, shipping: 200, bundles: [], shippingNote: '' };
   if (!fs.existsSync(CSV_FILE)) return result;
 
-  const raw = parseRows(fs.readFileSync(CSV_FILE, 'utf8'));
-  const rows = raw.filter((r) => !String(r[0] || '').trim().startsWith('#'));
-  const header = rows.shift() || [];
-  if (!/category/i.test(header.join(','))) return result;
+  let text = fs.readFileSync(CSV_FILE, 'utf8');
+  if (text.charCodeAt(0) === 0xfeff) text = text.slice(1); /* strip BOM */
 
-  const col = (name) => header.findIndex((h) => h.trim().toLowerCase() === name.toLowerCase());
-  const I = {
-    category: col('category'), code: col('code'), name: col('name'), price: col('price'),
-    posters: col('posters'), free: col('free_delivery'), badge: col('badge'),
-    tagline: col('tagline'), detail: col('detail'), features: col('features'),
-  };
+  /* The CSV is organized as small stacked tables, each headed by a
+     section marker line (SIZES / SHIPPING / BUNDLES), a header line,
+     then data rows. Spreadsheet-safe: no comment lines to mangle. */
+  const rows = parseRows(text);
+  let section = '';
+  let skipNext = false;
 
   for (const r of rows) {
-    const get = (ix) => (ix >= 0 && ix < r.length ? r[ix].trim() : '');
-    const category = get(I.category).toLowerCase();
-    if (!category || category.startsWith('#')) continue;
-    const code = get(I.code);
-    const price = asNumber(get(I.price));
+    const cells = r.map((c) => c.trim());
+    if (!cells.some(Boolean)) continue;
 
-    if (category === 'sizes') {
-      if (!code || price === null) continue;
-      result.sizes[code] = { label: get(I.name) || code, inches: get(I.detail), price };
-    } else if (category === 'shipping') {
+    if (cells.length === 1 && /^(sizes|shipping|bundles)$/i.test(cells[0])) {
+      section = cells[0].toLowerCase();
+      skipNext = true; /* the next row is that section's header */
+      continue;
+    }
+    if (skipNext) { skipNext = false; continue; }
+    if (!section) continue;
+
+    const priceCol = section === 'shipping' ? 1 : 3;
+    const price = asNumber(cells[priceCol]);
+
+    if (section === 'sizes') {
+      if (!cells[0] || price === null) continue;
+      result.sizes[cells[0]] = { label: cells[1] || cells[0], inches: cells[2] || '', price };
+    } else if (section === 'shipping') {
       if (price === null) continue;
       result.shipping = price;
-      result.shippingNote = get(I.detail) || get(I.name);
-    } else if (category === 'bundles') {
-      const posters = asNumber(get(I.posters));
-      if (!code || price === null || !posters) continue;
+      result.shippingNote = cells[0];
+    } else if (section === 'bundles') {
+      const posters = asNumber(cells[2]);
+      if (!cells[0] || price === null || !posters) continue;
       result.bundles.push({
-        id: code,
-        name: get(I.name) || code,
+        id: cells[0],
+        name: cells[1] || cells[0],
         posters,
         price,
-        freeDelivery: asBool(get(I.free)),
-        badge: get(I.badge),
-        tagline: get(I.tagline),
-        features: get(I.features).split(/\s*\|\s*/).filter(Boolean),
+        freeDelivery: asBool(cells[4]),
+        badge: cells[5],
+        tagline: cells[6],
+        features: (cells[7] || '').split(/\s*\|\s*/).filter(Boolean),
       });
     }
   }

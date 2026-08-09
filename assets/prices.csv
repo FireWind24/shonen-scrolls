@@ -1,24 +1,17 @@
-﻿# SHONEN SCROLLS — prices.csv
-# This file is the SINGLE source of truth for every price on the site.
-# Edit prices here, then push to GitHub — the live site rebuilds automatically.
-#   - category: one of "sizes", "shipping" or "bundles"
-#   - code:     short key (A4 / A5 / A6 | flat | genin / chunin / ...)
-#   - name:      display name
-#   - price:     price in Pakistani Rupees (whole numbers only)
-#   - posters:   bundles only - number of posters inside the pack
-#   - free_delivery: bundles only - "yes" waives the shipping charge for that pack
-#   - badge:     bundles only - corner label, leave blank for none
-#   - tagline:   bundles only - one line shown under the pack name
-#   - detail:    sizes only - print dimensions, e.g. 8x12 inches | shipping only - a note
-#   - features:  bundles only - bullet list, separate each bullet with a pipe  |  character
-# Roman numeral on bundle cards follows the order of the bundle rows (1st = I, 2nd = II, ...).
-category,code,name,price,posters,free_delivery,badge,tagline,detail,features
-sizes,A4,A4,250,,, , ,8x12 inches,
-sizes,A5,A5,150,,, , ,6x8 inches,
-sizes,A6,A6,100,,, , ,4x6 inches,
-shipping,flat,Flat delivery,200,,, , ,Per order,
-bundles,genin,Genin Pack,500,2,no, ,Every legend starts somewhere.,,2 × A4 posters
-bundles,chunin,Chunin Pack,1000,5,no, ,"You've proven yourself.",,"4 × A4 posters |+1 FREE A4 poster"
-bundles,jonin,Jonin Pack,1500,8,yes,BEST VALUE,Only the elite reach this rank.,,6 × A4 posters |+2 FREE A4 posters |FREE delivery
-bundles,hokage,Hokage Pack,2000,11,yes,MOST POPULAR,"Lead your village... and your wall.",,"8 × A4 posters |+3 FREE A4 posters |FREE delivery |Priority processing"
-bundles,collector,Collector's Pack,3000,17,yes, ,For the true anime addict.,,12 × A4 posters |+5 FREE A4 posters |FREE delivery |Priority processing |1 mystery bonus print
+﻿SIZES
+size,label,inches,price (Rs)
+A4,A4,8x12 inches,250
+A5,A5,6x8 inches,150
+A6,A6,4x6 inches,100
+
+SHIPPING
+label,price (Rs)
+Flat delivery per order,200
+
+BUNDLES
+pack,pack name,posters,price (Rs),free delivery,badge,tagline,features
+genin,Genin Pack,2,500,no,,Every legend starts somewhere.,2 × A4 posters
+chunin,Chunin Pack,5,1000,no,,You've proven yourself.,4 × A4 posters |+1 FREE A4 poster
+jonin,Jonin Pack,8,1500,yes,BEST VALUE,Only the elite reach this rank.,6 × A4 posters |+2 FREE A4 posters |FREE delivery
+hokage,Hokage Pack,11,2000,yes,MOST POPULAR,Lead your village... and your wall.,8 × A4 posters |+3 FREE A4 posters |FREE delivery |Priority processing
+collector,Collector's Pack,17,3000,yes,,For the true anime addict.,12 × A4 posters |+5 FREE A4 posters |FREE delivery |Priority processing |1 mystery bonus print

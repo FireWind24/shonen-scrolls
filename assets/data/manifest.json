@@ -1,22 +1,5 @@
 {
-  "generated": "2026-08-09T09:49:26.626Z",
-  "sizes": {
-    "A4": {
-      "label": "A4",
-      "inches": "8x12 inches",
-      "price": 250
-    },
-    "A5": {
-      "label": "A5",
-      "inches": "6x8 inches",
-      "price": 150
-    },
-    "A6": {
-      "label": "A6",
-      "inches": "4x6 inches",
-      "price": 100
-    }
-  },
+  "generated": "2026-08-09T10:13:35.127Z",
   "animes": [
     {
       "id": "jujutsu-kaisen",
